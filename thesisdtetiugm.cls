@@ -79,6 +79,7 @@
 \usepackage{forloop}
 \usepackage{longtable}
 \usepackage{enumitem}
+% \usepackage{paralist}
 \usepackage[labelsep=period]{caption} % use period as label separator
 \usepackage[bookmarks=true,hidelinks,bookmarksnumbered]{hyperref}  
 \usepackage{tikz}
