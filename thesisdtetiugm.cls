@@ -84,6 +84,7 @@
 \usepackage[labelsep=period]{caption} % use period as label separator
 \usepackage[bookmarks=true,hidelinks,bookmarksnumbered]{hyperref}  
 \usepackage{tikz}
+\usepackage{pdflscape}
 \usepackage{pgfplots}
 \usepackage{pgf-pie}
 \usetikzlibrary{calc}
