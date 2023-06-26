@@ -216,9 +216,9 @@ Dengan demikian, fitur aktivitas utama akan menjadi kelompok fitur set yang memi
 \begin{table}[H]
 	\centering
 	\caption{Daftar Fitur}
-	\begin{tabular}{|m{3cm}|p{0.68\textwidth}|m{1.5cm}|}
+	\begin{tabular}{|m{3cm}|p{0.68\textwidth}|m{1cm}|}
 		\hline
-		\centering\textbf{Aktivitas Utama} & \centering\textbf{Fitur} & \multicolumn{1}{m{1.5cm}|}{\centering \textbf{ID}} \\
+		\centering\textbf{Aktivitas Utama} & \centering\textbf{Fitur} & \multicolumn{1}{m{1cm}|}{\centering \textbf{ID}} \\
 		\hline
 		\multirow{4}{2.5cm}{\textit{Sign-in}} &Menampilkan halaman Sign-in & F-01 \\
 		\cline{2-3}
@@ -234,7 +234,7 @@ Dengan demikian, fitur aktivitas utama akan menjadi kelompok fitur set yang memi
 		\cline{2-3}
 		&\textit{Dialog box Sign Up} jika memilih fitur, tapi \textit{user} belum terdaftar& F-07 \\
 		\cline{2-3}
-		&Memilih fitur kuis dan fitur materi& F-08 \\
+		&Memilih fitur kuis, materi, dan profil& F-08 \\
 		\hline
 		\multirow{6}{2.5cm}{Mempelajari materi} &Menampilkan halaman daftar materi yang tersedia& F-09 \\
 		\cline{2-3}
@@ -265,9 +265,9 @@ Dengan demikian, fitur aktivitas utama akan menjadi kelompok fitur set yang memi
 
 \newpage
 \begin{table}[H]
-	\begin{tabular}{|m{3cm}|p{0.68\textwidth}|p{1.5cm}|}
+	\begin{tabular}{|m{3cm}|p{0.68\textwidth}|p{1cm}|}
 		\hline
-		\centering\textbf{Aktivitas Utama} & \centering\textbf{Fitur} & \multicolumn{1}{m{1.5cm}|}{\centering \textbf{ID}} \\
+		\centering\textbf{Aktivitas Utama} & \centering\textbf{Fitur} & \multicolumn{1}{m{1cm}|}{\centering \textbf{ID}} \\
 		\hline
 		\multirow{8}{2.5cm}{Mengerjakan kuis singkat mengnai materi} &Menampilkan halaman daftar kuis& F-14 \\
 		\cline{2-3}
@@ -285,127 +285,282 @@ Dengan demikian, fitur aktivitas utama akan menjadi kelompok fitur set yang memi
 		\cline{2-3}
 		&Menutup halaman daftar kuis dan kembali ke halaman utama& F-25 \\
 		\hline
-		\multirow{3}{3cm}{Melihat urutan \textit{Leaderboard} dari kuis terkait} & & F-25 \\
+		\multirow{3}{3cm}{Melihat urutan \textit{Leaderboard} dari kuis terkait} &Menampilkan halaman \textit{Leaderboard} untuk kuis yang dipilih & F-25 \\
 		\cline{2-3}
-		& & F-26 \\
+		&Menampilkan hasil score kuis pribadi yang sudah dikerjakan& F-26 \\
 		\cline{2-3}
-		& & F-27 \\
+		&Menampilkan urutan score dari yang tertinggi hingga terendah& F-27 \\
+		\cline{2-3}
+		&Menutup halaman leaderboard dan kembali ke halaman daftar kuis& F-27 \\
 		\hline
-		\multirow{4}{3cm}{Melihat penghargaan atau \textit{Achievement} berdasarkan kuis terkait} & & F-28 \\
+		\multirow{4}{3cm}{Melihat penghargaan atau \textit{Achievement} berdasarkan kuis terkait} &Menampilkan halaman profil& F-28 \\
 		\cline{2-3}
-		& & F-29 \\
+		&Menampilkan penghargaan yang ada dalam halaman profil& F-29 \\
 		\cline{2-3}
-		& & F-30 \\
+		&Menampilkan hasil scroe dari setiap kuis yang sudah dikerjakan& F-30 \\
 		\cline{2-3}
-		& & F-31 \\
+		&Menutup halaman profil dan kembali ke halaman utama aplikasi& F-31 \\
 		\hline
-		\multirow{1}{2.5cm}{\textit{Log-Out}} & & F-32 \\
+		\multirow{1}{2.5cm}{\textit{Log-Out}} &Menghentikan pemberian akses pengguna ketika pengguna sudah terdaftar& F-32 \\
 		\hline
 	\end{tabular}
 \end{table}
 \subsection{\textit{Plan by Feature}}
-Proses ini adalah perencanaan pengembangan atau proses mbentuk \textit{project timeline} dari seluruh fitur pada setiapfeature set seperti yang terlihat pada Tabel
+Proses ini adalah perencanaan pengembangan atau proses mbentuk \textit{project timeline} dari seluruh fitur pada setiapfeature set seperti yang terlihat pada Tabel.
+Perancangan ini bertujuan untuk menetapkan estimasi waktu agar proses pengembangan tidak tertinggal jauh.
+Proses pengembangan dilakukan secara bertahap fitur demi fitur. Tanggal pengembangan dimulai dari awal maret hingga bulan mei, sekitar kurang lebih 3 bulan.
+
 \begin{table}[H]
-	\begin{tabular}{|m{3cm}|p{0.68\textwidth}|p{1.5cm}|}
+	\begin{tabular}{|m{3cm}|p{0.62\textwidth}|p{2cm}|}
 		\hline
-		\centering\textbf{\textit{Feature Set}} & \centering\textbf{Fitur} & \multicolumn{1}{m{1.5cm}|}{\centering \textbf{ID}} \\
+		\centering\textbf{\textit{Feature Set}} & \centering\textbf{Fitur} & \multicolumn{1}{m{2cm}|}{\centering \textbf{Tanggal}} \\
 		\hline
-		\multirow{3}{2.5cm}{\textit{Sign-in}} & & F-01 \\
+		\multirow{4}{2.5cm}{\textit{Sign-in}} &Menampilkan halaman Sign-in & F-01 \\
 		\cline{2-3}
-		 & & F-02 \\
+		 &Mencatat \textit{user} baru ketika melakukan \textit{Sign-in} pertama & F-02 \\
 		\cline{2-3}
-		 & & F-03 \\
+		 &Aplikasi dapat memberikan akses pengguna ketika pengguna sudah terdaftar& F-03 \\
 		\hline
-		\multirow{1}{2.5cm}{\textit{Log-Out}} & & F-32 \\
+		\multirow{1}{2.5cm}{\textit{Log-Out}} &Menghentikan pemberian akses pengguna ketika pengguna sudah terdaftar& F-32 \\
 		\hline
-		\multirow{11}{2.5cm}{Mengerjakan kuis singkat mengnai materi} & & F-14 \\
+		\multirow{7}{2.5cm}{Mengerjakan kuis singkat mengnai materi} &Menampilkan halaman daftar kuis& F-14 \\
 		\cline{2-3}
-		& & F-15 \\
+		&Menampilkan halaman kuis yang dipilih& F-15 \\
 		\cline{2-3}
-		& & F-16 \\
+		&Memilih salah satu jawaban kuis berbasis pilihan ganda& F-16 \\
 		\cline{2-3}
-		& & F-17 \\
+		&Menampilkkan halaman kuis nomor selanjutnya& F-17 \\
 		\cline{2-3}
-		& & F-18 \\
+		&Menampilkan halaman kuis nomor sebelumnya& F-18 \\
 		\cline{2-3}
-		& & F-19 \\
+		&Menampilkan ringkasan kuis& F-19 \\
 		\cline{2-3}
-		& & F-20 \\
+		&Menyelesaikan kuis& F-20 \\
 		\cline{2-3}
-		& & F-21 \\
+		&Mendapatkan score kuis& F-21 \\
 		\cline{2-3}
-		& & F-22 \\
+		&Mencatat score kuis& F-21 \\
 		\cline{2-3}
-		& & F-23 \\
+		&Menampilkan warna merah untuk jawaban yang salah dan warna hijau untuk jawaban yang benar dalam ulasan kuis& F-22 \\
 		\cline{2-3}
-		& & F-24 \\
+		&Memriksa 1 per 1 jawaban kuis setelah mendapatkan score& F-23 \\
+		\cline{2-3}
+		&Mengerjakan kembali kuis& F-24 \\
+		\cline{2-3}
+		&Menutup halaman kuis dan kembali ke halaman daftar kuis& F-24 \\
+		\cline{2-3}
+		&Menutup halaman daftar kuis dan kembali ke halaman utama& F-25 \\
+		\hline
+		\multirow{3}{3cm}{Melihat urutan \textit{Leaderboard} dari kuis terkait} &Menampilkan halaman \textit{Leaderboard} untuk kuis yang dipilih & F-25 \\
+		\cline{2-3}
+		&Menampilkan hasil score kuis pribadi yang sudah dikerjakan& F-26 \\
+		\cline{2-3}
+		&Menampilkan urutan score dari yang tertinggi hingga terendah& F-27 \\
+		\cline{2-3}
+		&Menutup halaman leaderboard dan kembali ke halaman daftar kuis& F-27 \\
 		\hline
 	\end{tabular}
 \end{table}
 \newpage
 \begin{table}[H]
-	\begin{tabular}{|m{3cm}|p{0.68\textwidth}|p{1.5cm}|}
+	\begin{tabular}{|m{3cm}|p{0.62\textwidth}|p{2cm}|}
 		\hline
-		\centering\textbf{\textit{Feature Set}} & \centering\textbf{Fitur} & \multicolumn{1}{m{1.5cm}|}{\centering \textbf{ID}} \\
+		\centering\textbf{\textit{Feature Set}} & \centering\textbf{Fitur} & \multicolumn{1}{m{2cm}|}{\centering \textbf{ID}} \\
 		\hline
-		\multirow{3}{3cm}{Melihat urutan \textit{Leaderboard} dari kuis terkait} & & F-25 \\
+		\multirow{5}{2.5cm}{Melihat \textit{dashboard} halaman utama} &Menampilkan halaman \textit{On Boarding} jika \textit{useer} belum terdaftar & F-04 \\
 		\cline{2-3}
-		& & F-26 \\
+		&Menampilkan halaman utama aplikasi& F-05 \\
 		\cline{2-3}
-		& & F-27 \\
+		&Menampilkan \textit{side drawer}& F-06 \\
+		\cline{2-3}
+		&\textit{Dialog box Sign Up} jika memilih fitur, tapi \textit{user} belum terdaftar& F-07 \\
+		\cline{2-3}
+		&Memilih fitur kuis, materi, dan profil& F-08 \\
 		\hline
-		\multirow{4}{2.5cm}{Melihat \textit{dashboard} halaman utama} & & F-04 \\
+		\multirow{6}{2.5cm}{Mempelajari materi} &Menampilkan halaman daftar materi yang tersedia& F-09 \\
 		\cline{2-3}
-		& & F-05 \\
+		&Menampilkan materi yang dipilih & F-10 \\
 		\cline{2-3}
-		& & F-06 \\
+		&Keluar dari materi yang dipilih& F-11 \\
 		\cline{2-3}
-		& & F-07 \\
+		&Fitur kunci materi jika materi sebelumnya belum dibaca& F-12 \\
+		\cline{2-3}
+		&Keluar dari halaman daftar materi dan kembali ke halaman utama& F-13 \\
 		\hline
-		\multirow{6}{2.5cm}{Mempelajari materi} & & F-08 \\
+		\multirow{4}{3cm}{Melihat penghargaan atau \textit{Achievement} berdasarkan kuis terkait} &Menampilkan halaman profil& F-28 \\
 		\cline{2-3}
-		& & F-09 \\
+		&Menampilkan penghargaan yang ada dalam halaman profil& F-29 \\
 		\cline{2-3}
-		& & F-10 \\
+		&Menampilkan hasil scroe dari setiap kuis yang sudah dikerjakan& F-30 \\
 		\cline{2-3}
-		& & F-11 \\
-		\cline{2-3}
-		& & F-12 \\
-		\cline{2-3}
-		& & F-13 \\
-		\hline
-		\multirow{4}{3cm}{Melihat penghargaan atau \textit{Achievement} berdasarkan kuis terkait} & & F-28 \\
-		\cline{2-3}
-		& & F-29 \\
-		\cline{2-3}
-		& & F-30 \\
-		\cline{2-3}
-		& & F-31 \\
+		&Menutup halaman profil dan kembali ke halaman utama aplikasi& F-31 \\
 		\hline
 	\end{tabular}
 \end{table}
-Urutan pengembangan tidak mengikuti tabel sebelumnya. Tabel anu diurutkan berdasarka fitur yang paling utama dalam aplikasi ini.
 \subsection{\textit{Design by Feature}}
 Setelah menyusun daftar fitur dan merencanakan pengembangannya, selanjutnya adalah pembuatan design sesuai dengan perencangaan pengembangan.
-Proses ini akan mengembangkan desain prototype sebagai gambaran antarmuka aplikasi yang akan dikembbangkan. Proses pengembangan prototype akan diimplementasikan pada prototype aplikasi mobile.
-
+Proses ini akan mengembangkan desain untuk setiap fitur yang akan dikembangkan dimulai dari \textit{Activity Diagram} sebagai acuan untuk pengembangan prototype. 
+Lalu, dari \textit{Activity Diagram} tersebut dibuat prototype sebagai gambaran antarmuka aplikasi yang akan dikembangkan.
 \subsubsection{\textit{Feature set : Sign-in}}
+\textbf{\textit{Activity Diagram}} pada gambar \ref*{Fig:ActivityDiagramSignIn} merupakan skenario yang dapat user lakukan ketika ingin melakukan \textit{log-in} pada aplikasi.
+Proses \textit{log-in} pada aplikasi akan menggunakan \textit{Google Account Authentication} untuk mempermudah proses masuk agar tidak perlu mendaftarkan lagi pada aplikasi.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{contents/chapter-3/images/AD-signin.png}
+	\caption[Caption]{\textit{Sign-in Feature Set Activity Diagram}}
+	\label{Fig:ActivityDiagramSignIn}
+\end{figure}
+Dari \textit{Activity Diagram} tersebut kemudian mengembangkan desain antarmuka atau \textbf{\textit{Prototype}} untuk halaman \textit{Log-in} seperti disematkan pada gambar \ref*{fig:FeatureSetSignIn}.
+Fitur ini tidak memiliki \textit{game mechanics} dalam pengembangannya, melainkan mengimplementasikan \textit{Aesthetics} untuk mengembangkan antarmuka yang menarik.
+\begin{figure}[H]
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+	  \includegraphics[width=\linewidth]{contents/chapter-3/images/MF-login.png}
+	  \caption{\textit{Mid-Fidelity}}
+	  \label{fig:midFi-login}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-login.png}
+	  \caption{\textit{High-Fidelity}}
+	  \label{fig:hiFi-login}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-login-dt.png}
+	  \caption{\textit{High-Fidelity Dark}}
+	  \label{fig:hiFi-login-dt}
+	\end{subfigure}
+	\centering
+	\label{fig:FeatureSetSignIn}
+	\caption[short]{\textit{Prototype} antarmuka halaman \textit{Log-In}}
+\end{figure}
 \subsubsection{\textit{Feature set : Log-out}}
+
+\textbf{\textit{Activity Diagram}}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{contents/chapter-3/images/AD-signout.png}
+	\caption[Caption]{User Persona}
+	\label{Fig:UserPersona}
+\end{figure}
+
+\textbf{\textit{Mid-fi Prototype}}
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{contents/chapter-3/images/up-dummy.png}
+% 	\caption[Caption]{User Persona}
+% 	\label{Fig:UserPersona}
+% \end{figure}
+
 \subsubsection{\textit{Feature set : Quiz}}
+
+
+\textbf{\textit{Activity Diagram}}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{contents/chapter-3/images/AD-kuis.png}
+	\caption[Caption]{User Persona}
+	\label{Fig:UserPersona}
+\end{figure}
+
+\textbf{\textit{Mid-fi Prototype}}
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{contents/chapter-3/images/up-dummy.png}
+% 	\caption[Caption]{User Persona}
+% 	\label{Fig:UserPersona}
+% \end{figure}
 \subsubsection{\textit{Feature set : Leaderboard} }
+
+
+\textbf{\textit{Activity Diagram}}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{contents/chapter-3/images/AD-leaderboard.png}
+	\caption[Caption]{User Persona}
+	\label{Fig:UserPersona}
+\end{figure}
+
+\textbf{\textit{Mid-fi Prototype}}
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{contents/chapter-3/images/up-dummy.png}
+% 	\caption[Caption]{User Persona}
+% 	\label{Fig:UserPersona}
+% \end{figure}
+
 \subsubsection{\textit{Feature set : Dashboard}}
+\textbf{\textit{Activity Diagram}}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{contents/chapter-3/images/AD-halamanutama.png}
+	\caption[Caption]{User Persona}
+	\label{Fig:UserPersona}
+\end{figure}
+
+\textbf{\textit{Mid-fi Prototype}}
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{contents/chapter-3/images/up-dummy.png}
+% 	\caption[Caption]{User Persona}
+% 	\label{Fig:UserPersona}
+% \end{figure}
+
 \subsubsection{\textit{Feature set :} Materi}
+
+\textbf{\textit{Activity Diagram}}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{contents/chapter-3/images/AD-materi.png}
+	\caption[Caption]{User Persona}
+	\label{Fig:UserPersona}
+\end{figure}
+
+\textbf{\textit{Mid-fi Prototype}}
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{contents/chapter-3/images/up-dummy.png}
+% 	\caption[Caption]{User Persona}
+% 	\label{Fig:UserPersona}
+% \end{figure}
+
 \subsubsection{\textit{Feature set : Achievement}}
+
+\textbf{\textit{Activity Diagram}}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{contents/chapter-3/images/AD-profil.png}
+	\caption[Caption]{User Persona}
+	\label{Fig:UserPersona}
+\end{figure}
+
+\textbf{\textit{Mid-fi Prototype}}
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=\textwidth]{contents/chapter-3/images/up-dummy.png}
+% 	\caption[Caption]{User Persona}
+% 	\label{Fig:UserPersona}
+% \end{figure}
 
 \subsection{\textit{Build by Feature}}
-Pengembangan ini dipilih, karena metode yang ingin digunakan adalah memastikan setiap fitur gamifikasi sudah diimplementasikan dalam aplikasi
-\subsubsection{\textit{Feature set : Sign-in}}
-\subsubsection{\textit{Feature set : Log-out}}
-\subsubsection{\textit{Feature set : Quiz}}
-\subsubsection{\textit{Feature set : Leaderboard} }
-\subsubsection{\textit{Feature set : Dashboard}}
-\subsubsection{\textit{Feature set :} Materi}
-\subsubsection{\textit{Feature set : Achievement}}
+Tahap \textit{Build by Feature} merupakan tahap \textit{coding} dan implementasi tiap fitur pada \textit{feature set}.
+\textit{feature set} dibagi berdasarkan \textit{Main Activity}. Pengembangan dialakukan secara berurutan dari fitur ke fitur.
+Jika da kegagalan pada tahap ini, maka pengembangan fitur akan kembali ke tahap desain.
+Tahap pengembangan ini disertai dengan pengembangan gamifikasi yang sudah diimplementasikan pada tahap desain.
+
+Aplikasi ini akan dikembangkan pada platform mobile Android menggunakan \textit{Software Development Kit Flutter}, dan \textit{Firebase}.
+\textit{Flutter} dan \textit{Firebase}. \textit{Flutter} dipilih karena pengebangannya cukup mudah dan familiar karena mirip dengan pengembangan \textit{web}.
+Untuk \textit{Firebase} sendiri dipilih karena layanan tersebut sudah mencakup layanan \textit{back-end} dan \textit{database} sehingga memudahkan penulis dalam pengembangannya.
+Tools yang digunakan antara lain \textit{Visual Studio Code} sebagai \textit{Text Editor}, \textit{Android Emulator} pada\textit{Android Studio} untuk mendebug kode.
+
+% \subsubsection{\textit{Feature set : Sign-in}}
+% \subsubsection{\textit{Feature set : Log-out}}
+% \subsubsection{\textit{Feature set : Quiz}}
+% \subsubsection{\textit{Feature set : Leaderboard} }
+% \subsubsection{\textit{Feature set : Dashboard}}
+% \subsubsection{\textit{Feature set :} Materi}
+% \subsubsection{\textit{Feature set : Achievement}}
 
 \subsection{Menguji Fungsionalitas Aplikasi \textit{Black Box Testing}}
 pengujian ini diujikan untuk memastikan keseluruhan functional requirements sudah berjalan seusai dengan harapan dan kemudian dapat diujikan langsung ke pengguna
