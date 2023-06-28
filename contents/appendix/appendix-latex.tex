@@ -1,137 +1,334 @@
-\chapter*{LAMPIRAN}
-
-\section{Panduan Latex}
-
-\subsection{Syntax Dasar}
-
-
-
-\subsubsection{Penggunaan Sitasi}
-% Contoh penggunaan sitasi \cite{lukito2016,santosa2011user}
-% \cite{setiawan2014fuzzy} \cite{wibowo2014line} \cite{marenda2016digitory} \cite{wibirama2013dual,wibowo2016clustering}
-
-\subsubsection{Penulisan Gambar}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=10cm]{contents/chapter-1/sample-fig.png}
-	\caption{Contoh gambar.}
-	\label{Fig: Contoh gambar}
-\end{figure}
-
-% Contoh gambar terlihat pada Gambar \ref{Fig: Contoh gambar}. Gambar diambil dari \cite{wibowo2016clustering}.
-
-\subsubsection{Penulisan Tabel}
-\begin{table}[h]
-	\caption{Tabel ini}
-	\vspace{0.5em}
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		ID & Tinggi Badan (cm) & Berat Badan (kg) \\
-		\hline \hline
-		A23 & 173 & 62 \\
-		A25 & 185 & 78 \\
-		A10 & 162 & 70 \\ \hline
-	\end{tabular}
-	\label{Tab: Tabel Tinggi Berat}
-\end{table}
-Contoh penulisan tabel bisa dilihat pada Tabel \ref{Tab: Tabel Tinggi Berat}.
-
-\subsubsection{Penulisan formula}
-Contoh penulisan formula
-\begin{equation}
-	L_{\psi_z} = \{ t_i \mid v_z(t_i) \le \psi_z \}
-\end{equation}
-
-Contoh penulisan secara \textit{inline}: $\mathit{PV = nRT}$. Untuk kasus-kasus tertentu, kita membutuhkan perintah "mathit" dalam penulisan formula untuk menghindari adanya jeda saat penulisan formula.
-
-Contoh formula \textbf{tanpa} menggunakan "mathit": $PVA = RTD$
-
-Contoh formula \textbf{dengan} menggunakan "mathit": $\mathit{PVA = RTD}$
-
-
-
-\subsubsection{Contoh list}
-Berikut contoh penggunaan list
-\begin{enumerate}
-	\item First item
-	\item Second item
-	\item Third item
-\end{enumerate}
-
-\subsection{Blok Beda Halaman}
-
-\subsubsection{Membuat algoritma terpisah}
-
-Untuk membuat algoritma terpisah seperti pada contoh berikut, kita dapat memanfaatkan perintah \textit{algstore} dan \textit{algrestore} yang terdapat pada paket \textit{algcompatible}. Pada dasarnya, kita membuat dua blok algoritma dimana blok pertama kita simpan menggunakan \textit{algstore} dan kemudian di-restore menggunakan \textit{algrestore} pada algoritma kedua. Perintah tersebut dimaksudkan agar terdapat kesinamungan antara kedua blok yang sejatinya adalah satu blok. 
-
-\begin{algorithm}                     
-	\caption{Contoh algorima}          
-	\label{findme}                          
-	\begin{algorithmic} [1]                   
-		\Procedure{CreateSet}{$v$}
-		\State Create new set containing $v$
-		\EndProcedure
-		\algstore{myalg}
-	\end{algorithmic}
-\end{algorithm}
-
-Pada blok algoritma kedua, tidak perlu ditambahkan caption dan label, karena sudah menjadi satu bagian dalam blok pertama. Pembagian algoritma menjadi dua bagian ini berguna jika kita ingin menjelaskan bagian-bagian dari sebuah algoritma, maupun untuk memisah algoritma panjang dalam beberapa halaman.
-
-\begin{algorithm}                     
-	\begin{algorithmic} [1]                   
-		\algrestore{myalg}
-		\Procedure{ConcatSet}{$v$}
-		\State Create new set containing $v$
-		\EndProcedure
-	\end{algorithmic}
-\end{algorithm}
-
-
-\subsubsection{Membuat tabel terpisah}
-
-Untuk membuat tabel panjang yang melebihi satu halaman, kita dapat mengganti kombinasi \textit{table + tabular} menjadi \textit{longtable} dengan contoh sebagai berikut.
-
-\begin{longtable}{| c | c |} 
-	\caption{Contoh tabel panjang}
-	\label{tab:myfirstlongtable} \\
+\section{Data SUS dan UEQ}
+\begin{table}[H]
+	\caption{Tabel skor \textit{SUS}}
+    \begin{tabular}{|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{2cm}|}
+    \hline
+    Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 & Q8 & Q9 & Q10 & Skor SUS    \\
+    \hline
+    4  & 1  & 5  & 2  & 5  & 2  & 5  & 2  & 4  & 2   & 85          \\
+    \hline
+    5  & 1  & 5  & 1  & 4  & 3  & 5  & 1  & 1  & 1   & 82.5        \\
+    \hline
+    3  & 1  & 5  & 1  & 4  & 2  & 4  & 2  & 1  & 2   & 72.5        \\
+    \hline
+    4  & 1  & 5  & 1  & 5  & 1  & 5  & 1  & 5  & 1   & 97.5        \\
+    \hline
+    4  & 1  & 5  & 1  & 4  & 2  & 5  & 1  & 3  & 3   & 82.5        \\
+    \hline
+    4  & 1  & 4  & 1  & 4  & 3  & 4  & 2  & 4  & 1   & 80          \\
+    \hline
+    4  & 3  & 5  & 3  & 4  & 2  & 4  & 2  & 5  & 3   & 72.5        \\
+    \hline
+    4  & 2  & 4  & 2  & 4  & 2  & 4  & 2  & 2  & 3   & 67.5        \\
+    \hline
+    4  & 1  & 4  & 2  & 4  & 2  & 4  & 1  & 4  & 2   & 80          \\
+    \hline
+    5  & 1  & 5  & 1  & 5  & 1  & 5  & 1  & 4  & 1   & 97.5        \\
+    \hline
+    5  & 1  & 5  & 1  & 4  & 1  & 5  & 1  & 5  & 1   & 97.5        \\
+    \hline
+    4  & 2  & 4  & 3  & 4  & 2  & 4  & 2  & 4  & 4   & 67.5        \\
+    \hline
+    4  & 2  & 4  & 2  & 4  & 2  & 4  & 2  & 4  & 4   & 70          \\
+    \hline
+    4  & 1  & 4  & 2  & 5  & 2  & 3  & 2  & 4  & 5   & 70          \\
+    \hline
+    5  & 3  & 4  & 2  & 5  & 2  & 4  & 2  & 4  & 4   & 72.5        \\
+    \hline
+	4  & 4  & 3  & 1  & 4  & 1  & 5  & 1  & 5  & 1   & 82.5        \\
 	\hline
-	header 1 & header 2 \\
-	\hline \hline
-	foo & bar \\ \hline 
-	foo & bar \\ \hline
-	foo & bar \\ \hline
-	foo & bar \\ \hline
-	foo & bar \\ \hline
-	foo & bar \\ \hline
-	foo & bar \\ \hline
-	foo & bar \\ \hline
-	foo & bar \\ \hline
-	foo & bar \\ \hline
-	foo & bar \\ \hline
-\end{longtable}
+	2  & 2  & 4  & 2  & 3  & 3  & 4  & 3  & 4  & 4   & 57.5        \\
+	\hline
+	4  & 2  & 4  & 1  & 3  & 2  & 4  & 2  & 3  & 2   & 72.5        \\
+	\hline
+	3  & 1  & 5  & 2  & 5  & 2  & 4  & 2  & 2  & 4   & 70          \\
+	\hline
+	5  & 1  & 5  & 1  & 3  & 1  & 3  & 1  & 5  & 1   & 90          \\
+	\hline
+	4  & 2  & 5  & 5  & 5  & 2  & 4  & 1  & 5  & 4   & 72.5        \\
+	\hline
+	4  & 2  & 4  & 2  & 4  & 2  & 5  & 1  & 5  & 5   & 75          \\
+	\hline
+	4  & 3  & 3  & 4  & 4  & 4  & 3  & 3  & 3  & 4   & 47.5        \\
+	\hline
+	5  & 2  & 4  & 3  & 3  & 3  & 5  & 2  & 5  & 3   & 72.5        \\
+	\hline
+	4  & 2  & 4  & 3  & 4  & 4  & 4  & 3  & 4  & 4   & 60          \\
+	\hline
+	4  & 2  & 4  & 4  & 4  & 2  & 4  & 2  & 4  & 5   & 62.5        \\
+    \hline
+    \end{tabular}
+\end{table}
+\newpage
+\begin{table}[H]
+    \begin{tabular}{|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{2cm}|}
+	\hline
+	5  & 1  & 5  & 1  & 5  & 2  & 4  & 2  & 4  & 1   & 90          \\
+	\hline
+	3  & 1  & 5  & 1  & 4  & 2  & 5  & 1  & 4  & 2   & 85          \\
+	\hline
+	3  & 1  & 4  & 1  & 4  & 2  & 4  & 1  & 4  & 2   & 80          \\
+    \hline
+    5  & 1  & 5  & 4  & 2  & 2  & 5  & 1  & 2  & 2   & 72.5        \\
+    \hline
+    5  & 1  & 5  & 2  & 5  & 2  & 5  & 1  & 5  & 1   & 95          \\
+    \hline
+    5  & 2  & 5  & 1  & 5  & 1  & 5  & 1  & 5  & 3   & 92.5        \\
+    \hline
+    4  & 4  & 3  & 2  & 4  & 1  & 3  & 2  & 4  & 2   & 67.5        \\
+    \hline
+    4  & 1  & 5  & 2  & 3  & 1  & 5  & 2  & 3  & 4   & 75          \\
+    \hline
+    5  & 2  & 4  & 1  & 5  & 2  & 5  & 2  & 5  & 3   & 85          \\
+    \hline
+    4  & 2  & 4  & 4  & 4  & 1  & 3  & 3  & 4  & 3   & 65          \\
+    \hline
+    3  & 3  & 2  & 2  & 4  & 4  & 2  & 4  & 2  & 5   & 37.5        \\
+    \hline
+    2  & 3  & 3  & 4  & 3  & 3  & 3  & 3  & 4  & 5   & 42.5        \\
+    \hline
+    \multicolumn{10}{|l|}{Rata-rata skor SUS} & 74.9 \\
+    \hline
+    \end{tabular}
+\end{table}
+\begin{landscape}
+    \begin{table}
+        \centering
+        \caption{Data UEQ}
+        \begin{tabular}{|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|}
+        \hline
+        \multicolumn{26}{|c|}{\centering \textit{Items}} \\
+        \hline
+        \textbf{1}&\textbf{2}&\textbf{3}&\textbf{4}&\textbf{5}&\textbf{6}&\textbf{7}&\textbf{8}&\textbf{9}&\textbf{10}&\textbf{11}&\textbf{12}&\textbf{13}&\textbf{14}&\textbf{15}&\textbf{16}&\textbf{17}&\textbf{18}&\textbf{19}&\textbf{20}&\textbf{21}&\textbf{22}&\textbf{23}&\textbf{24}&\textbf{25}&\textbf{26} \\
+        \hline
+        6 & 6 & 2 & 2 & 2 & 6 & 6 & 4 & 3 & 2  & 7  & 2  & 6  & 6  & 6  & 6  & 2  & 2  & 2  & 6  & 2  & 6  & 2  & 2  & 2  & 6  \\
+        \hline
+        7 & 7 & 1 & 1 & 1 & 7 & 7 & 6 & 1 & 2  & 7  & 2  & 7  & 6  & 7  & 7  & 1  & 2  & 1  & 7  & 1  & 7  & 1  & 2  & 1  & 7  \\
+        \hline
+        5 & 6 & 3 & 2 & 4 & 6 & 7 & 7 & 1 & 3  & 6  & 2  & 4  & 6  & 4  & 6  & 2  & 3  & 1  & 6  & 2  & 6  & 2  & 2  & 1  & 5  \\
+        \hline
+        7 & 7 & 1 & 1 & 1 & 7 & 7 & 5 & 1 & 1  & 7  & 1  & 7  & 7  & 7  & 7  & 1  & 1  & 1  & 7  & 1  & 7  & 1  & 1  & 1  & 7  \\
+        \hline
+        6 & 5 & 3 & 2 & 2 & 6 & 6 & 6 & 2 & 5  & 7  & 1  & 6  & 6  & 3  & 6  & 2  & 2  & 3  & 7  & 1  & 7  & 2  & 2  & 1  & 5  \\
+        \hline
+        6 & 6 & 2 & 2 & 1 & 6 & 6 & 6 & 2 & 2  & 6  & 1  & 6  & 6  & 6  & 6  & 2  & 2  & 2  & 6  & 2  & 6  & 2  & 2  & 3  & 6  \\
+        \hline
+        5 & 6 & 5 & 2 & 3 & 5 & 5 & 6 & 3 & 3  & 6  & 1  & 7  & 5  & 3  & 6  & 3  & 2  & 3  & 5  & 2  & 5  & 2  & 3  & 2  & 6  \\
+        \hline
+        6 & 6 & 2 & 2 & 2 & 5 & 6 & 4 & 2 & 3  & 6  & 2  & 6  & 6  & 6  & 6  & 2  & 2  & 2  & 6  & 2  & 6  & 2  & 2  & 2  & 6  \\
+        \hline
+        6 & 6 & 2 & 2 & 2 & 6 & 6 & 6 & 2 & 2  & 6  & 2  & 6  & 6  & 2  & 6  & 2  & 2  & 2  & 6  & 2  & 6  & 4  & 2  & 2  & 6  \\
+        \hline
+        7 & 7 & 3 & 1 & 5 & 7 & 7 & 7 & 1 & 1  & 7  & 1  & 7  & 7  & 7  & 7  & 1  & 1  & 1  & 7  & 1  & 7  & 1  & 1  & 1  & 7  \\
+        \hline
+        7 & 7 & 2 & 1 & 1 & 7 & 7 & 6 & 1 & 2  & 7  & 1  & 7  & 6  & 6  & 7  & 2  & 1  & 1  & 7  & 1  & 7  & 1  & 1  & 2  & 6  \\
+        \hline
+        5 & 6 & 3 & 3 & 2 & 5 & 5 & 5 & 2 & 4  & 5  & 1  & 7  & 6  & 5  & 5  & 2  & 2  & 3  & 4  & 2  & 6  & 2  & 3  & 3  & 5  \\
+        \hline
+        6 & 7 & 2 & 2 & 2 & 6 & 6 & 6 & 2 & 2  & 6  & 4  & 6  & 6  & 5  & 6  & 3  & 2  & 2  & 6  & 2  & 6  & 2  & 2  & 2  & 6  \\
+        \hline
+        6 & 6 & 1 & 2 & 1 & 5 & 6 & 6 & 2 & 2  & 7  & 1  & 6  & 5  & 7  & 6  & 1  & 2  & 1  & 7  & 2  & 6  & 2  & 1  & 3  & 7  \\
+        \hline
+        6 & 6 & 1 & 2 & 1 & 6 & 7 & 5 & 4 & 2  & 6  & 1  & 6  & 7  & 7  & 7  & 6  & 3  & 4  & 5  & 1  & 7  & 1  & 1  & 1  & 7  \\
+        \hline
+        7 & 7 & 6 & 6 & 6 & 7 & 6 & 6 & 1 & 2  & 5  & 2  & 6  & 5  & 5  & 5  & 1  & 2  & 2  & 6  & 2  & 6  & 2  & 3  & 1  & 7  \\
+        \hline
+        4 & 5 & 5 & 4 & 4 & 3 & 3 & 4 & 3 & 4  & 6  & 3  & 5  & 4  & 3  & 6  & 3  & 3  & 4  & 3  & 3  & 5  & 3  & 4  & 3  & 4  \\
+        \hline
+        6 & 7 & 6 & 2 & 4 & 5 & 6 & 7 & 3 & 2  & 6  & 2  & 5  & 5  & 4  & 5  & 2  & 2  & 2  & 7  & 1  & 6  & 1  & 3  & 3  & 5  \\
+        \hline
+        5 & 5 & 4 & 1 & 1 & 2 & 6 & 2 & 2 & 4  & 6  & 1  & 6  & 4  & 2  & 6  & 2  & 2  & 3  & 6  & 2  & 6  & 2  & 2  & 2  & 6  \\
+        \hline
+        7 & 7 & 4 & 1 & 1 & 4 & 4 & 7 & 4 & 4  & 3  & 2  & 7  & 5  & 4  & 7  & 1  & 4  & 4  & 5  & 2  & 5  & 1  & 4  & 1  & 6  \\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{landscape}
+\newpage
+\begin{landscape}
+    \centering
+    \begin{table}
+        \centering
+        \begin{tabular}{|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|}
+        \hline
+        \multicolumn{26}{|c|}{\centering \textit{Items}} \\
+        \hline
+        \textbf{1}&\textbf{2}&\textbf{3}&\textbf{4}&\textbf{5}&\textbf{6}&\textbf{7}&\textbf{8}&\textbf{9}&\textbf{10}&\textbf{11}&\textbf{12}&\textbf{13}&\textbf{14}&\textbf{15}&\textbf{16}&\textbf{17}&\textbf{18}&\textbf{19}&\textbf{20}&\textbf{21}&\textbf{22}&\textbf{23}&\textbf{24}&\textbf{25}&\textbf{26} \\
+        \hline
+        5 & 4 & 1 & 1 & 3 & 3 & 7 & 7 & 6 & 6  & 6  & 5  & 6  & 6  & 6  & 5  & 6  & 2  & 4  & 4  & 6  & 6  & 2  & 3  & 2  & 6  \\
+        \hline
+        6 & 6 & 6 & 5 & 1 & 6 & 6 & 6 & 2 & 3  & 6  & 2  & 6  & 6  & 3  & 6  & 3  & 2  & 2  & 5  & 2  & 6  & 2  & 3  & 3  & 5  \\
+        \hline
+        4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  & 4  \\
+        \hline
+        7 & 7 & 1 & 1 & 2 & 6 & 7 & 6 & 1 & 2  & 7  & 1  & 6  & 7  & 6  & 7  & 1  & 1  & 1  & 6  & 2  & 6  & 1  & 2  & 1  & 7  \\
+        \hline
+        5 & 5 & 3 & 3 & 2 & 5 & 5 & 6 & 3 & 2  & 6  & 2  & 5  & 5  & 5  & 6  & 2  & 2  & 2  & 6  & 2  & 6  & 2  & 2  & 2  & 6  \\
+        \hline
+        6 & 6 & 2 & 4 & 2 & 4 & 4 & 4 & 3 & 4  & 5  & 1  & 4  & 6  & 4  & 6  & 2  & 3  & 3  & 5  & 2  & 5  & 3  & 2  & 3  & 6  \\
+        \hline
+        6 & 6 & 3 & 1 & 1 & 7 & 7 & 6 & 1 & 2  & 6  & 2  & 7  & 7  & 5  & 6  & 2  & 2  & 2  & 6  & 1  & 7  & 1  & 2  & 2  & 6  \\
+        \hline
+        6 & 7 & 4 & 2 & 4 & 5 & 5 & 5 & 3 & 3  & 5  & 2  & 6  & 6  & 3  & 5  & 3  & 3  & 2  & 6  & 2  & 6  & 3  & 3  & 2  & 4  \\
+        \hline
+        5 & 5 & 2 & 2 & 2 & 5 & 6 & 4 & 2 & 2  & 6  & 1  & 7  & 6  & 5  & 7  & 2  & 2  & 1  & 6  & 1  & 7  & 3  & 2  & 2  & 7  \\
+        \hline
+        6 & 7 & 1 & 1 & 1 & 6 & 7 & 7 & 1 & 1  & 7  & 1  & 7  & 7  & 6  & 7  & 1  & 7  & 1  & 7  & 1  & 7  & 1  & 1  & 1  & 7  \\
+        \hline
+        7 & 7 & 1 & 1 & 1 & 7 & 7 & 7 & 1 & 1  & 7  & 1  & 7  & 7  & 7  & 7  & 1  & 1  & 1  & 7  & 1  & 7  & 1  & 1  & 1  & 7  \\
+        \hline
+        7 & 7 & 2 & 1 & 2 & 7 & 7 & 7 & 1 & 1  & 7  & 1  & 7  & 7  & 5  & 7  & 1  & 1  & 1  & 7  & 1  & 7  & 1  & 2  & 1  & 6  \\
+        \hline
+        5 & 2 & 6 & 6 & 2 & 6 & 6 & 4 & 2 & 2  & 6  & 2  & 6  & 6  & 5  & 6  & 2  & 2  & 2  & 6  & 2  & 6  & 2  & 4  & 2  & 4  \\
+        \hline
+        6 & 7 & 2 & 1 & 1 & 5 & 6 & 2 & 1 & 2  & 7  & 1  & 7  & 7  & 7  & 6  & 1  & 1  & 2  & 7  & 1  & 6  & 1  & 2  & 1  & 6  \\
+        \hline
+        6 & 6 & 2 & 1 & 1 & 6 & 6 & 6 & 1 & 2  & 7  & 1  & 7  & 6  & 6  & 7  & 1  & 2  & 2  & 6  & 1  & 6  & 2  & 2  & 2  & 6  \\
+        \hline
+        5 & 4 & 4 & 5 & 5 & 4 & 5 & 5 & 4 & 4  & 6  & 2  & 4  & 5  & 5  & 5  & 3  & 3  & 3  & 5  & 3  & 6  & 5  & 2  & 4  & 5  \\
+        \hline
+        3 & 5 & 3 & 4 & 3 & 4 & 5 & 3 & 3 & 3  & 5  & 3  & 3  & 3  & 5  & 3  & 4  & 4  & 4  & 4  & 5  & 4  & 3  & 3  & 5  & 5  \\
+        \hline
+        5 & 5 & 5 & 4 & 2 & 4 & 4 & 3 & 2 & 5  & 5  & 1  & 6  & 4  & 2  & 5  & 4  & 4  & 4  & 5  & 4  & 4  & 4  & 4  & 2  & 4  \\
+        \hline
+        3 & 6 & 6 & 5 & 1 & 2 & 2 & 2 & 2 & 6  & 2  & 3  & 2  & 4  & 2  & 3  & 3  & 2  & 6  & 3  & 7  & 4  & 3  & 6  & 5  & 3  \\ 
+        \hline
+        \end{tabular}
+    \end{table}
+\end{landscape}
+
+% \section{Panduan Latex}
+
+% \subsection{Syntax Dasar}
 
 
-\subsubsection{Menulis formula terpisah halaman}
 
-Terkadang kita butuh untuk menuliskan rangkaian formula dalam jumlah besar sehingga melewati batas satu halaman. Solusi yang digunakan bisa saja dengan memindahkan satu blok formula tersebut pada halaman yang baru atau memisah rangkaian formula menjadi dua bagian untuk masing-masing halaman. Cara yang pertama mungkin akan menghasilkan alur yang berbeda karena ruang kosong pada halaman pertama akan diisi oleh teks selanjutnya. Sehingga di sini kita dapat memanfaatkan \textit{align} yang sudah diatur dengan mode \textit{allowdisplaybreaks}. Penggunakan \textit{align} ini memungkinkan satu rangkaian formula terpisah berbeda halaman. 
+% \subsubsection{Penggunaan Sitasi}
+% % Contoh penggunaan sitasi \cite{lukito2016,santosa2011user}
+% % \cite{setiawan2014fuzzy} \cite{wibowo2014line} \cite{marenda2016digitory} \cite{wibirama2013dual,wibowo2016clustering}
 
-Contoh sederhana dapat digambarkan sebagai berikut.
+% \subsubsection{Penulisan Gambar}
 
-\begin{align*}
-	x &= y^2\\
-	x &= y^3\\
-	a + b &= c\\
-	x &= y - 2\\
-	a + b &= d + e \tag{\stepcounter{equation}\theequation}\\
-	x^2 + 3 &= y\\
-	a(x) &= 2x\\
-	b_i &= 5x\\
-	10x^2 &= 9x\\
-	2x^2 + 3x + 2 &= 0\\
-	5x - 2 &= 0\\
-	d &= \log x\\
-	y &= \sin x
-\end{align*}
+% \begin{figure}[h]
+% 	\centering
+% 	\includegraphics[width=10cm]{contents/chapter-1/sample-fig.png}
+% 	\caption{Contoh gambar.}
+% 	\label{Fig: Contoh gambar}
+% \end{figure}
+
+% % Contoh gambar terlihat pada Gambar \ref{Fig: Contoh gambar}. Gambar diambil dari \cite{wibowo2016clustering}.
+
+% \subsubsection{Penulisan Tabel}
+% \begin{table}[h]
+% 	\caption{Tabel ini}
+% 	\vspace{0.5em}
+% 	\centering
+% 	\begin{tabular}{|c|c|c|}
+% 		\hline
+% 		ID & Tinggi Badan (cm) & Berat Badan (kg) \\
+% 		\hline \hline
+% 		A23 & 173 & 62 \\
+% 		A25 & 185 & 78 \\
+% 		A10 & 162 & 70 \\ \hline
+% 	\end{tabular}
+% 	\label{Tab: Tabel Tinggi Berat}
+% \end{table}
+% Contoh penulisan tabel bisa dilihat pada Tabel \ref{Tab: Tabel Tinggi Berat}.
+
+% \subsubsection{Penulisan formula}
+% Contoh penulisan formula
+% \begin{equation}
+% 	L_{\psi_z} = \{ t_i \mid v_z(t_i) \le \psi_z \}
+% \end{equation}
+
+% Contoh penulisan secara \textit{inline}: $\mathit{PV = nRT}$. Untuk kasus-kasus tertentu, kita membutuhkan perintah "mathit" dalam penulisan formula untuk menghindari adanya jeda saat penulisan formula.
+
+% Contoh formula \textbf{tanpa} menggunakan "mathit": $PVA = RTD$
+
+% Contoh formula \textbf{dengan} menggunakan "mathit": $\mathit{PVA = RTD}$
+
+
+
+% \subsubsection{Contoh list}
+% Berikut contoh penggunaan list
+% \begin{enumerate}
+% 	\item First item
+% 	\item Second item
+% 	\item Third item
+% \end{enumerate}
+
+% \subsection{Blok Beda Halaman}
+
+% \subsubsection{Membuat algoritma terpisah}
+
+% Untuk membuat algoritma terpisah seperti pada contoh berikut, kita dapat memanfaatkan perintah \textit{algstore} dan \textit{algrestore} yang terdapat pada paket \textit{algcompatible}. Pada dasarnya, kita membuat dua blok algoritma dimana blok pertama kita simpan menggunakan \textit{algstore} dan kemudian di-restore menggunakan \textit{algrestore} pada algoritma kedua. Perintah tersebut dimaksudkan agar terdapat kesinamungan antara kedua blok yang sejatinya adalah satu blok. 
+
+% \begin{algorithm}                     
+% 	\caption{Contoh algorima}          
+% 	\label{findme}                          
+% 	\begin{algorithmic} [1]                   
+% 		\Procedure{CreateSet}{$v$}
+% 		\State Create new set containing $v$
+% 		\EndProcedure
+% 		\algstore{myalg}
+% 	\end{algorithmic}
+% \end{algorithm}
+
+% Pada blok algoritma kedua, tidak perlu ditambahkan caption dan label, karena sudah menjadi satu bagian dalam blok pertama. Pembagian algoritma menjadi dua bagian ini berguna jika kita ingin menjelaskan bagian-bagian dari sebuah algoritma, maupun untuk memisah algoritma panjang dalam beberapa halaman.
+
+% \begin{algorithm}                     
+% 	\begin{algorithmic} [1]                   
+% 		\algrestore{myalg}
+% 		\Procedure{ConcatSet}{$v$}
+% 		\State Create new set containing $v$
+% 		\EndProcedure
+% 	\end{algorithmic}
+% \end{algorithm}
+
+
+% \subsubsection{Membuat tabel terpisah}
+
+% Untuk membuat tabel panjang yang melebihi satu halaman, kita dapat mengganti kombinasi \textit{table + tabular} menjadi \textit{longtable} dengan contoh sebagai berikut.
+
+% \begin{longtable}{| c | c |} 
+% 	\caption{Contoh tabel panjang}
+% 	\label{tab:myfirstlongtable} \\
+% 	\hline
+% 	header 1 & header 2 \\
+% 	\hline \hline
+% 	foo & bar \\ \hline 
+% 	foo & bar \\ \hline
+% 	foo & bar \\ \hline
+% 	foo & bar \\ \hline
+% 	foo & bar \\ \hline
+% 	foo & bar \\ \hline
+% 	foo & bar \\ \hline
+% 	foo & bar \\ \hline
+% 	foo & bar \\ \hline
+% 	foo & bar \\ \hline
+% 	foo & bar \\ \hline
+% \end{longtable}
+
+
+% \subsubsection{Menulis formula terpisah halaman}
+
+% Terkadang kita butuh untuk menuliskan rangkaian formula dalam jumlah besar sehingga melewati batas satu halaman. Solusi yang digunakan bisa saja dengan memindahkan satu blok formula tersebut pada halaman yang baru atau memisah rangkaian formula menjadi dua bagian untuk masing-masing halaman. Cara yang pertama mungkin akan menghasilkan alur yang berbeda karena ruang kosong pada halaman pertama akan diisi oleh teks selanjutnya. Sehingga di sini kita dapat memanfaatkan \textit{align} yang sudah diatur dengan mode \textit{allowdisplaybreaks}. Penggunakan \textit{align} ini memungkinkan satu rangkaian formula terpisah berbeda halaman. 
+
+% Contoh sederhana dapat digambarkan sebagai berikut.
+
+% \begin{align*}
+% 	x &= y^2\\
+% 	x &= y^3\\
+% 	a + b &= c\\
+% 	x &= y - 2\\
+% 	a + b &= d + e \tag{\stepcounter{equation}\theequation}\\
+% 	x^2 + 3 &= y\\
+% 	a(x) &= 2x\\
+% 	b_i &= 5x\\
+% 	10x^2 &= 9x\\
+% 	2x^2 + 3x + 2 &= 0\\
+% 	5x - 2 &= 0\\
+% 	d &= \log x\\
+% 	y &= \sin x
+% \end{align*}
 

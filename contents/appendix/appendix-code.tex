@@ -1,74 +1,98 @@
-\chapter*{LAMPIRAN}
+\section{Algoritma Fitur}
 
-\section{Contoh Source Code}
-
-\subsection{Sample algorithm}
-\begin{algorithm}
-	\caption{Kruskal's Algorithm}\label{alg:kruskal}
-	\begin{algorithmic}[1]
-		\Procedure{MakeSet}{$v$}
-			\State Create new set containing $v$
-		\EndProcedure \\
-		
-		\Function{FindSet}{$v$} 
-			\State\Return a set containing $v$
-		\EndFunction \\
-		
-		\Procedure{Union}{$u$,$v$}
-			\State Unites the set that contain $u$ and $v$ into a new set
-		\EndProcedure \\
-		
-		\Function{Kruskal}{$V,E,w$}
-			\State $A \gets \{\}$
-			\For {each vertex $v$ in $V$}
-				\State MakeSet($v$)
-			\EndFor
-			\State Arrange $E$ in increasing costs, ordered by $w$
-			\For {each ($u$,$v$) taken from the sorted list}
-				\If {FindSet($u$) $\neq$ FindSet($v$)}
-					\State $A \gets A \cup \{(u,v)\}$
-					\State Union($u,v$)
-				\EndIf
-			\EndFor
-			\State \Return A
-		\EndFunction
-	\end{algorithmic}
+\subsection{Algoritma Materi}
+\begin{algorithm}[H]
+    \caption{Pseudocode \textit{Save User}}
+    \begin{algorithmic}
+        \Function{navigatoSubject}{$isTryAgain, index$}
+          \State $authController = Get.find()$
+          \If{$authController.isLogedIn()$}
+            \If{$isTryAgain$}
+              \State $Get.back()$
+              \State $Get.to(() => SubjectScreen(index: index))$
+            \Else
+              \State $Get.to(() => SubjectScreen(index: index))$
+            \EndIf
+          \Else
+            \State $authController.showLoginAlertDialog()$
+          \EndIf
+        \EndFunction
+    \end{algorithmic}
 \end{algorithm}
 
-\newpage
-\subsection{Sample Python code}
-\begin{lstlisting}[language=Python]
-import numpy as np
+\subsection{Algoritma Dashboard}
+\begin{algorithm}[H]
+    \caption{Pseudocode \textit{Save User}}
+    \begin{algorithmic}
+        \Function{initAuth}{}
+          \State $await Future.delayed(const Duration(seconds: 2))$
+          \State $\_auth = FirebaseAuth.instance$
+          \State $\_authStateChanges = _auth.authStateChanges()$
+          \State $\_authStateChanges.listen$ \{
+            \State $\_user.value = user$
+          \}
+          \If{$\_auth.currentUser == null$}
+            \State $navigateToOnboarding()$
+          \Else
+            \State $navigateToHome()$
+          \EndIf
+        \EndFunction        
+    \end{algorithmic}
+\end{algorithm}
 
-def incmatrix(genl1,genl2):
-	m = len(genl1)
-	n = len(genl2)
-	M = None #to become the incidence matrix
-	VT = np.zeros((n*m,1), int)  #dummy variable
+\begin{algorithm}[H]
+    \caption{Pseudocode \textit{Save User}}
+    \begin{algorithmic}
+        \Function{signOut}{}
+          \State $AppLogger.d("Sign out")$
+            \State $\_auth.signOut()$
+            \State $navigateToHome()$
+        \EndFunction
+    \end{algorithmic}
+\end{algorithm}
 
-	#compute the bitwise xor matrix
-	M1 = bitxormatrix(genl1)
-	M2 = np.triu(bitxormatrix(genl2),1) 
+\subsection{Algoritma sign out}
+\begin{algorithm}[H]
+    \caption{Pseudocode \textit{Save User}}
+    \begin{algorithmic}
+        \Function{signOut}{}
+          \State $AppLogger.d("Sign out")$
+            \State $_auth.signOut()$
+            \State $navigateToHome()$
+        \EndFunction
+    \end{algorithmic}
+\end{algorithm}
 
-	for i in range(m-1):
-		for j in range(i+1, m):
-			[r,c] = np.where(M2 == M1[i,j])
-			for k in range(len(r)):
-				VT[(i)*n + r[k]] = 1;
-				VT[(i)*n + c[k]] = 1;
-				VT[(j)*n + r[k]] = 1;
-				VT[(j)*n + c[k]] = 1;
-
-	if M is None:
-		M = np.copy(VT)
-	else:
-		M = np.concatenate((M, VT), 1)
-
-	VT = np.zeros((n*m,1), int)
-
-	return M
-\end{lstlisting}
-
-\newpage
-\subsection{Sample Matlab code}
-\lstinputlisting[language=Octave]{sample/sample-code.m}
+\begin{algorithm}[H]
+    \caption{Pseudocode \textit{Save User}}
+    \begin{algorithmic}
+        \Function{saveUser}{$account$}
+        \State $doc = userFR.doc(account.email)$
+        \State $doc.set$ \{
+            "email": account.email,
+            "name": account.displayName,
+            "profilepic": account.photoUrl,
+            //"totalScore": 0,
+        \}
+        \EndFunction
+    \end{algorithmic}
+\end{algorithm}
+\begin{algorithm}[H]
+    \caption{Pseudocode \textit{Save User}}
+    \begin{algorithmic}
+        \Function{signInWithGoogle}{}
+          \State $googleSignIn = GoogleSignIn()$
+            \State $account = googleSignIn.signIn()$
+            \If{$account \neq null$}
+              \State $gAuthentication = account.authentication$
+              \State $credential = GoogleAuthProvider.credential$ \{
+                "idToken": gAuthentication.idToken,
+                "accessToken": gAuthentication.accessToken,
+              \}
+              \State $_auth.signInWithCredential(credential)$
+              \State $saveUser(account)$
+              \State $navigateToHome()$
+            \EndIf
+        \EndFunction
+    \end{algorithmic}
+\end{algorithm}
