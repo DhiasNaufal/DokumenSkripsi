@@ -26,7 +26,7 @@ Alat yang digunakan untuk mengembangkan Aplikasi ini terdiri dari Perangkat Kera
 % \end{enumerate}
 \newpage
 \subsection{Bahan Tugas akhir}
-Bahan yang digunakan untuk Tugas Akhir ini ialah sebagi berikut :
+Bahan yang digunakan untuk Tugas Akhir ini ialah sebagi berikut:
 \begin{enumerate}
 	\item Materi mata kuliah \textit{System Diagnosis Berbasis Pembantu Keputusan} (SBPK) dari Departemen Teknik Elektro dan Teknologi Informasi berupa file .pptx
 	\item Data hasil wawancara pada Mahasiswa Teknik Biomedis sebagai informasi tambahan pembuatan \textit{user persona}
@@ -91,9 +91,28 @@ Informasi yang diperoleh dari studi literatur tersebut akan menjadi dasar pertim
 \subsection{\textit{Develop Overall Model}}
 Setelah menelaah literatur yanga ada, dilanjutkan dengan proses pengembangan. Proses pengembangan aplikasi ini dimulai dari mendesain model keseluruhan untuk sebuah aplikasi pembelajaran.
 Sebelum melakukan proses desain, penulis akan menentukan domain ilmu yang akan dipelajari dalam sebuah media pembelajaran yang akan dikembangkan. Hal ini dimaksudkan untuk mempermudah untuk menetapkan elemen gamifikasi pada aplikasi tersebut.
+\subsubsection{Tujuan Pembelajaran}
+Pengembangan media pembelajaran pada penelitian ini akan menggunakan kategori domain \textit{Declarative Knowledge}. 
+Pendekatan kategori ini digunakan dengan tujuan pengenalan awal terhadap ilmu \textit{Clinical Decision Support System}.
+Dalam konteks \textit{CDSS} kategori ini mencakup pengetahuan tentang konsep-konsep dasar mengenai \textit{CDSS}, seperti definisi \textit{CDSS}, komponen-komponennya, prinsip-prinsip desain, dan metode evaluasi.
+yang berhubungan dengan pengetahuan yang berkaitan dengan fakta, informasi, atau konsep yang dapat dinyatakan dengan jelas cocok untuk pengguna awam yang ingin memahami ilmu ini. Dalam \textit{CDSS}, pengetahuan deklaratif mencakup pengetahuan medis dan informasi terkait yang digunakan untuk mendukung pengambilan keputusan klinis.
+Dalam pengebanga kali ini, materi yang akan disuguhkan ke dalam aplikasinya ialah sebagai berikut:
+\begin{enumerate}
+	\item \textit{Decision Support System (DSS)}
+	\item \textit{Clinical Decision Support System(CDSS)}
+	\item \textit{Medical Diagnostic Test}
+	\item \textit{Electronic Health Record (EHR)}
+\end{enumerate}
+Materi \textit{CDSS} dipilih sebagai pengenalan awal dari dasar pengembangan sebuah \textit{CDSS}. 
+\textit{CDSS} ini berperan sebagai ilmu utama komputasi yang dilakukan untuk membantu keputusan medis yang dimaksud.
+Setelah materi itu, dilanjutkan dengan materi awal mengenai \textit{CDSS}. Materi ini kemudian dijelaskan bagaimana implementasi \textit{DSS} ke dalam konteks medis.
+Materi ini juga akan menjelasakan komponen dan jenis-jenis \textit{CDSS}.
+\textit{Medical Diagnostic Test} merupakan salah satu komponen data yang dibutuhkan dalam proses pengembangan \textit{CDSS} dan berfungsi untuk mendapatkan hasil diagnosis yang tepat.
+Aplikasi ini juga menyediakan materi \textit{Electronic Health Record} yang merupakan sebuah sistem yang digunakan untuk menyimpan dan mengelola informasi data kesehatan secara digital.
+Dari \textit{EHR} ini lah data dikumpulkan dan diproses dengan \textit{DSS} untuk membantu keputusan medis.
 
-Pengembangan media pembelajaran pada penelitian ini akan menggunakan kategori domain \textit{Declarative Knowledge}. Kategori ini cocok untuk ilmu \textit{Clinical Decision Support System} karena kategori ini mencakup pengetahuan tentang konsep-konsep dasar mengenai CDSS, seperti definisi CDSS, komponen-komponennya, prinsip-prinsip desain, dan metode evaluasi.
-yang berhubungan dengan pengetahuan yang berkaitan dengan fakta, informasi, atau konsep yang dapat dinyatakan dengan jelas cocok untuk pengguna awam yang ingin memahami ilmu ini. Dalam CDSS, pengetahuan deklaratif mencakup pengetahuan medis dan informasi terkait yang digunakan untuk mendukung pengambilan keputusan klinis.
+
+
 
 \subsubsection{\textit{User persona}}
 Sebelum melakukan proses desain, akan dibuat terlebih dahulu sebuah \textit{user persona} dari gambaran umum aplikasi yang akan dibuat.
@@ -107,12 +126,16 @@ Informasi yang dicari antara lain adalah pengalaman narasumber selama mempelajar
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{contents/chapter-3/images/up-dummy.png}
+	\includegraphics[width=0.8\textwidth]{contents/chapter-3/images/up-dummy.png}
 	\caption{\textit{User Persona}}
 	\label{Fig:UserPersona}
 \end{figure}
 
 \subsubsection{\textit{Activity-centered Design}}
+Setelah mengembangakan model keseluruhan dan menganalisis calon pengguna, selanjutnya dalam penelitian akan dikembangkan sebuah desain dengan pendekatan \textit{Activity-centered Design}.
+Metode ini digunakan bertujuan untuk mengembangkan aplikasi sesuai dengan aktivitas penggunanya.
+Aktivitas ang diambil ialah aktivitas umum yang biasa dilakukan oleh seorang yang menggunakan media pembelajaran elektronik.
+Setelah itu, aktivtias utama tersebut yang akan menjadi aktivitas acuan dimana fitur akan dikembangkan. Daftar aktivitas utama ditampilkan pada tabel \ref*{Tab: Tabel Main Activity}.
 \begin{table}[H]
 	\centering
 	\caption{Struktur aktivitas utama}
@@ -137,19 +160,17 @@ Informasi yang dicari antara lain adalah pengalaman narasumber selama mempelajar
 	\end{tabular}
 	\label{Tab: Tabel Main Activity}
 \end{table}
-Tabel \ref*{Tab: Tabel Main Activity} merupakan daftar aktivitas utama untuk aplikasi yang akan dikembangkan.
-Secara keseluruhan aplikasi pembelajaran yang akan dikembangakan memiliki tujuan untuk mempelajari \textit{Clinical Decision Support System}. 
-Aktivitas utama tersebut diformulasikan berdasarkan \textit{user persona}yang sudah dibuat. Aktivitas utama terdiri mempelajari materi, dan melakukan kuis untuk melatih pemahaman.
+Aktivitas utama terdiri dari mempelajari materi, dan melakukan kuis untuk melatih pemahaman.
 Dari daftar aktivitas tersebut, kemudian dirancang sebuah \textit{Use Case Diagram} sebagai gambaran umum perancangan aplikasi yang akan dikembangkan. \textit{Use Case Diagram} ditunjukkan pada gambar \ref*{Fig:Use Case Diagram}. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{contents/chapter-3/images/Use-Case-Diagram.png}
+	\includegraphics[width=0.5\textwidth]{contents/chapter-3/images/Use-Case-Diagram.png}
 	\caption{\textit{Use Case Diagram}}
 	\label{Fig:Use Case Diagram}
 \end{figure}
 
 \subsubsection{\textit{Gamification Design}}
-Proses pengembangan gamifikasi dalam aplikasi ini akan didasari oleh kategori domain pembelajaran atau \textit{Type of Knowledge} ilmu yang diimplementasikan. Seperti yang sudah dijelasakan sebelumnya, domain pembelajaran yang akan dikembangakan ialah \textit{Declarative Knowledge}.
+Pengembangan media pembelajaran akan diimplementasikan gamifikasi. Proses pengembangan gamifikasi dalam aplikasi ini akan didasari oleh kategori domain pembelajaran atau \textit{Type of Knowledge} ilmu yang diimplementasikan. Seperti yang sudah dijelasakan sebelumnya, domain pembelajaran yang akan dikembangkan ialah \textit{Declarative Knowledge}.
 Dalam buku yang ditulis oleh Kapp(2012), setiap domain pembelajaran memiliki elemen gamifikasinya masing-masing. Dalam bukunya juga menjelaskan domain \textit{Declarative Knowledge} memiliki elemen gamifikasi \textit{Story/Narrative}, \textit{Sorting}, \textit{Matching}, dan \textit{Replayability}.
 Lebih lengkapnya pada tabel \ref*{Tab:Declarative-knowledge}
 \begin{table}[H]
@@ -176,8 +197,8 @@ Pendekatan ini akan mengimplementasikan elemen permainan ke dalam produk penelit
 Penggunaan metode dan rancangan ini disesuaikan dengan kebutuhan dan tujuan adanya gamifikasi dalam aplikasi yang dikembangkan.
 Acuan pengembangan desain ini akan mengikuti dengan aktivitas utama yang sudah dirumuskan sebelumnya pada tabel \ref*{Tab: Tabel Main Activity}.
 Pengembangan ini dimulai dari pengembangan \textit{Game Mechanics}.
-
-\textit{Game Mechanics} berfokus pada aturan pada peraturan pada permainan. Mekanika permainan yang tersusun pada aplikasi ini ialah :
+\newpage
+\textit{Game Mechanics} berfokus pada aturan pada peraturan pada permainan. Mekanika permainan yang tersusun pada aplikasi ini ialah:
 \begin{description}
 	\item[\textit{Modes}]
 	pada aplikasi, akan tedapat 2 mode, yaitu pembelajaran materi dan Kuis.
@@ -188,12 +209,12 @@ Pengembangan ini dimulai dari pengembangan \textit{Game Mechanics}.
 	\item[\textit{Achievement}] merupakan elemen mekanik yang memberikan penghargaan kepada pengguna ketika mereka mencapai tujuan atau melakukan pencapaian tertentu dalam aplikasi. Pencapaian ini dapat berupa sertifikat, \textit{badge}, atau level yang diberikan kepada pengguna sebagai bentuk pengakuan atas prestasi mereka.
 	\item[\textit{Time Attack}] merupakan elemen mekanik yang akan diimplementasikan pada fitur kuis. Elemen ini akan memberikan tantangan kepada pengguna untuk mengerjakan kuis dengan waktu yang ditentukan. Waktu pengerjaan ini juga akan mempengaruhi poin yang didapatkan oleh pengguna.
 \end{description}
-Setelah selesai mendesain mekanika permainan, dilanjutkan dengan mendesain dinamika permainan. \textit{Dynamics} atau Dinamika merujuk pada perilaku sistem permainan yang timbul dari interaksi antara pemain dengan mekanika permainan. Ini mencakup respons terhadap tindakan pemain, aliran permainan, pola interaksi, dan perubahan yang terjadi seiring permainan berlangsung. Dinamika permainan yang tersusun pada aplikasi ini ialah : 
+Setelah selesai mendesain mekanika permainan, dilanjutkan dengan mendesain dinamika permainan. \textit{Dynamics} atau Dinamika merujuk pada perilaku sistem permainan yang timbul dari interaksi antara pemain dengan mekanika permainan. Ini mencakup respons terhadap tindakan pemain, aliran permainan, pola interaksi, dan perubahan yang terjadi seiring permainan berlangsung. Dinamika permainan yang tersusun pada aplikasi ini ialah: 
 \begin{description}
 	\item[{Materi dan kuis yang diakses berurutan}] merupakan elemen dinamis yang melibatkan pengguna dalam mengeksplorasi dan memperoleh pengetahuan secara berurutan. Pengguna dapat menavigasi melalui materi yang disusun dengan urutan tertentu untuk memahami konten aplikasi secara sistematis.
 	\item[\textit{Leaderboard}] merupakan elemen dinamis yang memungkinkan pengguna untuk melihat peringkat mereka dan peringkat pengguna lain dalam aplikasi. Ini menciptakan dinamika persaingan di antara pengguna, mendorong mereka untuk mencapai skor tinggi, dan berada di peringkat teratas.
 \end{description}
-Akhir dari kerangka kerja ini kemudian dilanjutkan dengan mendesain estetika permainan. \textit{Aesthetics} atau estetika merujuk pada perasaan, emosi, dan kepuasan yang dirasakan oleh pemain saat bermain. Estetika memberikan dimensi pengalaman permainan yang melibatkan elemen seperti kegembiraan, kepuasan, kekaguman, dan tantangan. Estetika permainan yang tersusun pada aplikasi ini ialah : 
+Akhir dari kerangka kerja ini kemudian dilanjutkan dengan mendesain estetika permainan. \textit{Aesthetics} atau estetika merujuk pada perasaan, emosi, dan kepuasan yang dirasakan oleh pemain saat bermain. Estetika memberikan dimensi pengalaman permainan yang melibatkan elemen seperti kegembiraan, kepuasan, kekaguman, dan tantangan. Estetika permainan yang tersusun pada aplikasi ini ialah: 
 \begin{description}
 	\item [\textit{Unlocking Part}] berdasarkan urutan, diharapkan pengguna mendapatkan perasaan untuk membuka materi baru.
 	\item [\textit{On Boarding}] sebagai panduan kepada pengguna baru untuk membantu pengguna mengikuti dinamika permainan yang dibuat.
@@ -396,11 +417,11 @@ Setelah menyusun daftar fitur dan merencanakan pengembangannya, selanjutnya adal
 Proses ini akan mengembangkan desain untuk setiap fitur yang akan dikembangkan dimulai dari \textit{Activity Diagram} sebagai acuan untuk pengembangan \textit{prototype}. 
 Lalu, dari \textit{Activity Diagram} tersebut dibuat prototype sebagai gambaran antarmuka aplikasi yang akan dikembangkan.
 \textit{Prototype} desain berupa \textit{Mid-Fidelity Wireframe}
-\subsubsection{\textit{Feature set : Sign-in}}
+\subsubsection{\textit{Feature set: Sign-in}}
 \textit{Activity Diagram} pada gambar \ref*{Fig:ActivityDiagramSignIn} merupakan skenario yang dapat user lakukan ketika ingin melakukan \textit{log-in} pada aplikasi.
 Proses \textit{log-in} pada aplikasi akan menggunakan \textit{Google Account Authentication} untuk mempermudah proses masuk agar tidak perlu mendaftarkan lagi pada aplikasi.
 Scenario yang diterapkan ialah pada halaman \textit{Log-in} akan terdapat 1 tombol dengan tulisan \textit{"Sign in with Google"}, dan pengguna dapat masuk menggunakan autentikasi akun google yang dimiliki pengguna.
-Kemudian,aplikasi akan mendeteksi apakah akun tersebut sudah terdaftar di database atau belum. Jika sudah, aplikasi akan langsung memberikan akses pada pengguna, jika belum aplikasi akan mencatat pengguna baru ke dalam \textit{database}.
+Kemudian,aplikasi akan mendeteksi apakah akun tersebut sudah terdaftar di \textit{database} atau belum. Jika sudah, aplikasi akan langsung memberikan akses pada pengguna, jika belum aplikasi akan mencatat pengguna baru ke dalam \textit{database}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{contents/chapter-3/images/AD-signin.png}
@@ -408,7 +429,6 @@ Kemudian,aplikasi akan mendeteksi apakah akun tersebut sudah terdaftar di databa
 	\label{Fig:ActivityDiagramSignIn}
 \end{figure}
 Dari \textit{Activity Diagram} tersebut kemudian mengembangkan desain antarmuka atau \textbf{\textit{Prototype}} untuk halaman \textit{Log-in} seperti disematkan pada gambar \ref*{Fig:FeatureSetLogin}.
-% Fitur ini tidak memiliki \textit{game mechanics} dalam pengembangannya, melainkan mengimplementasikan \textit{Aesthetics} untuk mengembangkan antarmuka yang menarik.
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.3\textwidth}
@@ -427,9 +447,10 @@ Dari \textit{Activity Diagram} tersebut kemudian mengembangkan desain antarmuka 
 	\label{Fig:FeatureSetLogin}
 \end{figure}
 Pada \textit{prototype} tersebut ada 2 halaman, yaitu halaman \textit{log-in} yang terdiri dari gambar, tulisan, dan sebuah tombol (gambar \ref*{fig:ActivityLogin}).
-Sedangkan halaman 1 lagi adalah halaman pemilihan akun google yang akan dijadikan autentikasi pada aplikasi yang ditunjukkan pada gambar \ref*{fig:ActivityLogin2}
+Sedangkan halaman 1 lagi adalah halaman pemilihan akun google yang akan dijadikan autentikasi pada aplikasi yang ditunjukkan pada gambar \ref*{fig:ActivityLogin2}.
+Elemen gamifikasi pada desain ini akan terletak pada \textit{User Interface} yang dikembangkan semenarik mungkin sebagai estetika permainan yang akan diimplementasikan. 
 
-\subsubsection{\textit{Feature set : Dashboard}}
+\subsubsection{\textit{Feature set: Dashboard}}
 Halaman \textit{Dashboard} akan menjadi halaman pertama yang ditampilkan ketika pengguna sudah dapat mengakses aplikasi.
 Untuk pengguna yang belum memiliki akses dan belum terdaftar pada \textit{database}, pengguna akan diarahkan ke halaman \textit{On Boarding} yang akan menampilkan sedikit informasi aplikasi yang sedang berjalan.
 Halaman \textit{boarding} akan terdiri dari 3 halaman dimana setiap halaman menampilkan objektif dari aplikasi.
@@ -478,7 +499,7 @@ Fitur kuis dan materi akan ditampilkan pada halaman depan aplikasi halama utaman
 \end{figure}
 Pada halaman utama, jika pengguna belum melakukan \textit{sign-in}, pengguna akan diberikan \textit{warning dialog} seperti pada gambar \ref*{fig:ActivityMain3} untuk melakukan \textit{sign-in}.
 \textit{Warning dialog} tersebut akan menampilkan 2 opsi tombol. Jika \textit{warning dialog} diafirmasi, maka akan diarahkan ke halaman \textit{Sign-in}.
-\subsubsection{\textit{Feature set : Log-out}}
+\subsubsection{\textit{Feature set: Log-out}}
 Fitur \textit{Log-out} atau mengeluarkan akses aplikasi dari akun google merupakan fitur yang datang sejalan dengan fitur \textit{sign-in}.
 Fitur ini memungkinkan kita mengeluarkan akun google kita dari aplikasi. Dalam pengembangan ini, fitur ini akan disematkan pada \textit{side drawer} bagian bawah aplikasi.
 Jika pengguna sudah \textit{sign-in} dan ingin mengeluarkan akunnya dari aplikasi, pengguna bisa melakukan aktivitas seperti pada tabel \ref*{Fig:ActivityOut}
@@ -488,7 +509,7 @@ Jika pengguna sudah \textit{sign-in} dan ingin mengeluarkan akunnya dari aplikas
 	\includegraphics[width=0.8\textwidth]{contents/chapter-3/images/AD-signout.png}
 	\label{Fig:ActivityOut}
 \end{figure}
-\subsubsection{\textit{Feature set : Quiz}}
+\subsubsection{\textit{Feature set: Quiz}}
 Selanjutnya dikembangkan desain untuk fitur utama gamifikasi aplikasi ini, yaitu kuis singkat untuk meningkatkan pemahaman mengenai materi.
 Kuis singkat ini akan terdiri dari paketan kuis yang di dalamnya terdapat sejumlah nomor yang dapat kita kerjakan. Kemudian pengguna akan memilih pilihan paling benar dari pertanyaan yang diberikan.
 Jumlah soal pada pengembangan ini akan dibuat sebanyak 4 peket kuis dari 4 materi utama \textit{Clinical Decision Support System}. Diantaranya adalah konsep dasar \textit{Decision Support system}, \textit{Clinical Decision Support System}, \textit{Medical Diagnostic Test}, dan \textit{Electronic Health Record}.
@@ -579,7 +600,7 @@ Pergantian halaman antar nomor merupakan dinamika permainan yang diimplementasik
 	\caption{\textit{Prototype} antarmuka halaman kuis}
 	\label{Fig:FeatureSetQuiz}
 \end{figure}
-\subsubsection{\textit{Feature set : Leaderboard}}
+\subsubsection{\textit{Feature set: Leaderboard}}
 Fitur selanjutnya yang berhubungan dengan fitur kuis ialah fitur \textit{Leaderboard}. 
 Fitur ini memungkinkan untuk mengurutkan urutan perolehan poin berdasarkan jumlah poin yang didapatkan pada masing-masing kuis.
 Fitur ini pada kerangka kerja gamifikasi termasuk ke dalam kategori dinamika permainan dimana pengguna bisa berkompetisi untuk mendapatkan skor paling tinggi.
@@ -599,7 +620,7 @@ Fitur ini akan mengurutkan pengguna pada setiap kuis yang dikerjakan, dengan dem
 	\caption{\textit{Prototype} antarmuka fitur \textit{Leaderboard}}
 	\label{Fig:ActivityLeaderboard2}
 \end{figure}
-\subsubsection{\textit{Feature set :} Materi}
+\subsubsection{\textit{Feature set:} Materi}
 
 Sama seperti fitur kuis, fitur materi juga merupakan salah satu elemen mekanika permainan dalam aplikasi ini.
 Mode materi ini memungkinkan kita mendapatkan materi pembelajaran mengenai \textit{Clinical Decision Support System}.
@@ -637,7 +658,7 @@ Fitur materi ini secara umum adalah menampilkan file pdf yang didesain semenarik
 	\caption{\textit{Prototype} antarmuka halaman fitur materi}
 	\label{Fig:FeatureSetSubject}
 \end{figure}
-\subsubsection{\textit{Feature set : Achievement}}
+\subsubsection{\textit{Feature set: Achievement}}
 
 Ada juga fitur penghargaan pada aplikasi ini. Skenario fitur ini digambarkan pada gambar \ref*{Fig:ActivityProfiil}
 \begin{figure}[H]
@@ -667,7 +688,10 @@ Tahap pengembangan ini disertai dengan pengembangan gamifikasi yang sudah diimpl
 Aplikasi ini akan dikembangkan pada platform mobile Android menggunakan \textit{Software Development Kit Flutter}, dan \textit{Firebase}.
 \textit{Flutter} dan \textit{Firebase}. \textit{Flutter} dipilih karena pengebangannya cukup mudah dan familiar karena mirip dengan pengembangan \textit{web}.
 Untuk \textit{Firebase} sendiri dipilih karena layanan tersebut sudah mencakup layanan \textit{back-end} dan \textit{database} sehingga memudahkan penulis dalam pengembangannya.
-Tools yang digunakan antara lain \textit{Visual Studio Code} sebagai \textit{Text Editor}, \textit{Android Emulator} pada\textit{Android Studio} untuk mendebug kode.
+Tools yang digunakan antara lain \textit{Visual Studio Code} sebagai \textit{Text Editor}, \textit{Android Emulator} pada \textit{Android Studio} untuk mendebug kode.
+% \subsubsection{\textit{Flutter Application}}
+% \textit{Flutter Application} pada aplikasi ini akan menjadi \textit{front-end} utama. Pengembangan 
+% \subsubsection{\textit{Firebase}}
 \subsection{Menguji Fungsionalitas Aplikasi \textit{Black Box Testing}}
 Pengujian ini diujikan untuk memastikan keseluruhan functional requirements sudah berjalan seusai dengan harapan dan kemudian dapat diujikan langsung ke pengguna.
 \begin{table}[H]
@@ -679,7 +703,7 @@ Pengujian ini diujikan untuk memastikan keseluruhan functional requirements suda
 		\hline
 		F-01 &Menampilkan halaman Sign-in & Aplikasi mampu menampilkan halaman \textit{sign-in} \\
 		\hline
-		F-02 &Mencatat \textit{user} baru ketika melakukan \textit{Sign-in} pertama & Aplikasi dapat mencatat \textit{user} baru ketika melakukan \textit{Sign-in} pertama dan mengirimkannya ke database\\
+		F-02 &Mencatat \textit{user} baru ketika melakukan \textit{Sign-in} pertama & Aplikasi dapat mencatat \textit{user} baru ketika melakukan \textit{Sign-in} pertama dan mengirimkannya ke \textit{database}\\
 		\hline
 		F-03 &Aplikasi dapat memberikan akses pengguna ketika pengguna sudah terdaftar& Pengguna dapat menggunakan fitur aplikasi\\
 		\hline
@@ -723,11 +747,11 @@ Pengujian ini diujikan untuk memastikan keseluruhan functional requirements suda
 		\hline
 		F-19&Menampilkan ringkasan kuis& Aplikasi akan menampilkan halaman ringkasan kuis  \\
 		\hline
-		F-20&Menyelesaikan kuis& Aplikasi dapat menutup halaman utama kuis, menghitung jawaban yang benar, dan mengirim hasilya ke database \\
+		F-20&Menyelesaikan kuis& Aplikasi dapat menutup halaman utama kuis, menghitung jawaban yang benar, dan mengirim hasilya ke \textit{database} \\
 		\hline
 		F-21&Mendapatkan skor kuis& Aplikasi akan  menghitung jawaban yang benar dan menampilkan skor hasil kuis \\
 		\hline
-		F-22&Mencatat skor kuis& Aplikasi dapat mengirimkan hasil kuis ke database\\
+		F-22&Mencatat skor kuis& Aplikasi dapat mengirimkan hasil kuis ke \textit{database}\\
 		\hline
 		F-23&Menampilkan warna merah untuk jawaban yang salah dan warna hijau untuk jawaban yang benar dalam ulasan kuis& Aplikasi mampu Menampilkan warna merah untuk jawaban yang salah dan warna hijau untuk jawaban yang benar dalam ulasan kuis  \\
 		\hline
@@ -782,6 +806,6 @@ Setelah itu pengujian pertama responden akan mengisikan formulir \textit{System 
 Hasil kuesioner SUS dan UEQ yang didapat kemudian dilakukan 
 perhitungan menggunakan rumus dan alat yang sesuai untuk mendapatkan hasil 
 uji. Hal ini untuk menentukan apakah aplikasi sudah cukup bagus atau perlu ada 
-perbaikan kedepan. 
+perbaikan kedepan.
 % Bagian ini membahas pertimbangan etis penelitian dan [potensi] masalah serta
 % keterbatasannya. Jika menyangkut penelitian dengan makhluk hidup, maka dibutuhkan adanya \textit{ethical clearance}, di bagian ini hal itu akan dibahas. Demikian juga tentang keterbatasan ataupun masalah yang akan timbul.

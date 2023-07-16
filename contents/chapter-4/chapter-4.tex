@@ -14,45 +14,69 @@ Pemilihan warna yang tepat untuk konteks pembelajaran merupakan upaya untuk meme
 Aplikasi ini dinamai "\textbf{MedQ}" untuk kesan \textit{simple} da mudah diingat. MedQ adalah kependekan dari \textit{Medical Education Quiz}.
 
 Hasil pertama dari penelitain ini ialah \textit{prototype} desain \textit{Hi-fidelity wireframe} dari aplikasi yang akan dikembangkan.
-\textit{Prototype} ini dibuat berdasarkan fitur set yang dikembangkan dan terdiri dari tema terang dan tema gelap.
-\subsection{\textit{FeatureSet : Sign-In}}
+\textit{Prototype} ini dibuat berdasarkan fitur set yang dikembangkan dan terdiri dari tema terang dan tema gelap. Setiap fitur set ini juga diidentifikasi apa saja elemen gamifikasi yang dapat diimplementasikan.
+Setiap fitur set tentunya akan memiliki elemen dan tujuan gamifikasinya masing-masing. Dari \textit{prototype} yang dikembangkan, kemudian dibuat dalam bentuk aplikasi flutter sebagai \textit{front-end} untuk pengembangannya dengan \textit{back-end service} menggunakan \textit{firebase}.
+
+% ===================================SIGN IN============================================================================================
+\newpage
+\subsection{\textit{Feature set: Sign-In}}
+Set fitur yang pertama adalah sebuah halaman \textit{Sign-in} dimana pengguna akan mendaftarkan dirinya untuk dapat mengakses ke dalam aplikasi.
+Cara pengguna melakukan \textit{Sign-in} ialah dengan menggunakan autentikasi akun \textit{Google}.
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.25\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-login.png}
 	  \caption{\textit{Light Mode}}
 	  \label{fig:HasilLogin}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.25\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-login-dt.png}
 	  \caption{\textit{Dark Mode}}
 	  \label{fig:HasilLogin2}
 	\end{subfigure}
-	\caption{\textit{Prototype} antarmuka halaman \textit{Log-in}}
+	\caption{\textit{Prototype} antarmuka halaman \textit{Sign-in}}
 	\label{Fig:HasilFeatureSetLogin}
 \end{figure}
 Gambar \ref*{Fig:HasilFeatureSetLogin} merupakan \textit{prototype} dari halaman \textit{sign-in} aplikasi ini. 
 Halaman ini menyediakan 1 tombol yang berfungsi untuk meminta autentikasi \textit{google} pada pengguna.
-Gambar ditambahkan pada halaman ini untuk mendukung kesan estetika pada aplikasi.
+Gambar ditambahkan pada halaman ini untuk mendukung kesan estetika pada aplikasi. 
+Serta ditambahkan juga tema gelap ke dalam aplikasi untuk mendapatkan kesan estetika ketika menggunakan mode gelap dalam \textit{handphone}.
+\begin{table}[H]
+	\caption{Tabel desain gamifikasi fitur \textit{Sign-in}}
+	\begin{tabular}{|c|m{0.4\textwidth}|m{0.3\textwidth}|}
+		\hline
+		Elemen Gamifikasi& Letak Elemen & Tujuan Gamifikasi\\
+		\hline
+		\multirow{3}{2.5cm}{\textit{Aesthetic}}&\textit{User Interface}&Pengalaman pengguna yang menyenangkan\\
+		\cline{2-3}
+		& Tema gelap & Estetika modern dan kekinian \\
+		\cline{2-3}
+		& Gambar orang sedang bermain \textit{game} & Memberikan kesan estetika permainan pada pengguna \\
+		\hline
+	\end{tabular}
+\end{table}
 % ============================================
-\subsection{\textit{Feature set : Dashboard}}
+\subsection{\textit{Feature set: Dashboard}}
+Fitur set selanjutnya ialah halaman \textit{On Boarding} yang didesain seperti pada gambar \ref*{Fig:HasilFeatureSetBoarding} dan \ref*{Fig:HasilFeatureSetBoarding-dt} . 
+Halaman ini akan ditampilkan jika pengguna belum pernah \textit{Sign-in}. 
+Tujuannya ialah memberikan kesan dinamika permainan yang akan ditempuh oleh penggunanya.
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.25\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Boarding-1.png}
 	  \caption{\textit{On Boarding (1)}}
 	  \label{fig:HasilBoarding}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.25\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Boarding-2.png}
 	  \caption{\textit{On Boarding (2)}}
 	  \label{fig:HasilBoarding2}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.25\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Boarding-3.png}
 	  \caption{\textit{On Boarding (3)}}
@@ -63,19 +87,19 @@ Gambar ditambahkan pada halaman ini untuk mendukung kesan estetika pada aplikasi
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.25\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Boarding-1-dt.png}
 	  \caption{\textit{On Boarding (1)}}
 	  \label{fig:HasilBoarding1-dt}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.25\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Boarding-2-dt.png}
 	  \caption{\textit{On Boarding (2)}}
 	  \label{fig:HasilBoarding2-dt}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.25\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Boarding-3-dt.png}
 	  \caption{\textit{On Boarding (3)}}
@@ -84,32 +108,54 @@ Gambar ditambahkan pada halaman ini untuk mendukung kesan estetika pada aplikasi
 	\caption{\textit{Prototype} antarmuka halaman \textit{On Boarding} tema gelap}
 	\label{Fig:HasilFeatureSetBoarding-dt}
 \end{figure}
-Fitur set selanjutnya ialah halaman \textit{On Boarding} yang didesain seperti pada gambar \ref*{Fig:HasilFeatureSetBoarding} dan \ref*{Fig:HasilFeatureSetBoarding-dt} . 
-Halaman ini akan ditampilkan jika pengguna belum pernah \textit{Sign-in}. 
-Tujuannya ialah memberikan kesan dinamika permianan yang akan ditempuh oleh penggunanya.
-Halaman ini akan terdiri dari 3 halaman dengan kalimat yang bebeda tiap halamannya.
+Halaman \textit{on boarding} sendiri terdiri dari 3 halaman dengan kalimat yang berbeda tiap halamannya.
 Tombol diberikan untuk berpindah halaman dan melanjutkan ke halaman \textit{Dashboard}.
+\begin{table}[H]
+	\caption{Tabel desain gamifikasi halaman \textit{on boarding}}
+	\begin{tabular}{|p{3.6cm}|m{0.4\textwidth}|m{0.3\textwidth}|}
+		\hline
+		Elemen Gamifikasi& Letak Elemen & Tujuan Gamifikasi\\
+		\hline
+		\textit{Dynamic}&\textit{On boarding guide}&Memberikan informasi dinamika yang akan dilalui pengguna \\
+		\hline
+		\multirow{4}{1cm}{\textit{Aesthetic}}&\textit{User Interface}&Terlihat lebih menarik\\
+		\cline{2-3}
+		& Gambar orang sedang melambaikan tangan (Gambar \ref*{fig:HasilBoarding} dan \ref*{fig:HasilBoarding1-dt}) & Menunjukkan selamat datang pada pengguna \\
+		\cline{2-3}
+		& Gambar orang ingin memulai perjalanan dengan sebuah tujuan (Gambar \ref*{fig:HasilBoarding2} dan \ref*{fig:HasilBoarding2-dt}) & Menunjukkan salah satu dinamika permainan untuk menyelesaikan perjalanan yang perlu ditempuh \\
+		\cline{2-3}
+		& Gambar orang mendapatkan juara (Gambar \ref*{fig:HasilBoarding3} dan \ref*{fig:HasilBoarding3-dt}) & Menunjukkan salah satu dinamika permainan untuk mendapatkan skor tertinggi \\
+		\hline
+	\end{tabular}
+\end{table}
+Selain halaman \textit{On Boarding}, halaman utama aplikasi juga termasuk ke dalam fitur set ini. Desain halaman utama aplikasi ini terdapat pada gambar \ref*{Fig:HasilFeatureDashboard}.
+Dalam halaman ini terdapat langsung 2 mode yang dimiliki oleh aplikasi ini. Kedua mode ini merupakan \textit{"rules"} atau mekanika permainan yang perlu diselesaikan oleh pengguna.
+Mode tersebut terdiri dari mode materi dimana kita dapat melihat materi yang sudah disediakan dan mode kuis dimana kita akan mengujikan pengetahuan kita mengenai materi yang diberikan.
+Kedua mode ini juga termasuk ke dalam dinamika permainan dimana pengguna dapat mendapatkan materi dan menguji coba kuis yang disediakan.
+Halaman ini juga dapat menampilkan \textit{side drawer} untuk melihat profil dan juga tombol untuk \textit{sign-out} dari aplikasi.
+\textit{Side drawer} ini juga mampu menampilkan \textit{tab-tab} lain yang dapat diatur navigasinya. Untuk penelitian ini \textit{tab} tersebut hanya diisi oleh informasi pengembang dan media sosial pengembang.
+
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.24\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Main.png}
 	  \caption{Halaman utama}
 	  \label{fig:HasilMainDash}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.24\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Drawer.png}
 	  \caption{\textit{Drawer}}
 	  \label{fig:HasilMainDash2}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.24\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Main-dt.png}
 	  \caption{Halaman Utama}
 	  \label{fig:HasilMainDash-dark}
 	\end{subfigure}
-    \begin{subfigure}[b]{0.23\textwidth}
+    \begin{subfigure}[b]{0.24\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Drawer-dt.png}
 	  \caption{\textit{Drawer}}
@@ -117,21 +163,40 @@ Tombol diberikan untuk berpindah halaman dan melanjutkan ke halaman \textit{Dash
 	\end{subfigure}
 	\caption{\textit{Prototype} antarmuka halaman \textit{Dashboard} utama}
 	\label{Fig:HasilFeatureDashboard}
-\end{figure}
-Selain halaman \textit{On Boarding}, halaman utama aplikasi juga termasuk ke dalam fitur set ini. Desain halaman utama apliaksi ini terdapat pada gambar \ref*{Fig:HasilFeatureDashboard}.
-Dalam halaman ini terdapat langsung 2 mode yang dimiliki oleh aplikasi ini. Mode ini termasuk ke dalam dinamika permainan untuk aplikasi ini.
-Halaman ini juga dapat menampilkan \textit{side drawer} untuk melihat profil dan juga tombol untuk \textit{sign-out} dari aplikasi.
-\textit{Side drawer} ini juga mampu menampilkan \textit{tab-tab} lain yang dapat diatur navigasinya. Untuk penelitian ini \textit{tab} tersebut hanya diisi oleh informasi pengembang dan media sosial pengembang. 
-\subsection{\textit{Feature set} : Kuis}
+\end{figure} 
+
+\begin{table}[H]
+	\caption{Tabel desain gamifikasi halaman \textit{Dashboard}}
+	\begin{tabular}{|m{3.6cm}|m{0.4\textwidth}|m{0.3\textwidth}|}
+		\hline
+		Elemen Gamifikasi& Letak Elemen & Tujuan Gamifikasi\\
+		\hline
+		\textit{Mechanic}&\textit{Mode}& Diberikan mode sebagai mekanika yang  dapat dikerjakan oleh pengguna \\
+		\hline
+		\multirow{3}{1cm}{\textit{Aesthetic}}&\textit{User Interface}&Pengalaman pengguna yang menyenangkan\\
+		\cline{2-3}
+		& Tema gelap & Estetika modern dan kekinian \\
+		\cline{2-3}
+		& Foto profil & Estetika menunjukkan pemilik akun \\
+		\hline
+	\end{tabular}
+\end{table}
+\subsection{\textit{Feature set}: Kuis}
+Fitur set selanjutnya ilah fitur set aktivitas mengerjakan kuis. 
+Desain yang pertama dibuat ialah desain untuk memilih kuis yang akan dikerjakan seperti tergambar pada gambar \ref*{Fig:HasilFeatureSetQuizListt}.
+Pada gambar tersebut disajikan daftar kuis yang tersedia pada aplikasi.
+Masing-masing daftar akan membuka halaman kuis yang terdapat pada gambar \ref*{Fig:HasilFeatureSetQuiz}.
+Masing-masing daftar tersebut juga terdapat tombol untuk menuju halaman fitur set \textit{leaderboard}.
+Kuis tersebut sengaja disajikan berurutan untuk memberikan kesan dinamika permainan dalam aplikasi ini.
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.3\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-QuizList.png}
 	  \caption{\textit{Light Mode}}
 	  \label{fig:HasilQuizList}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.3\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-QuizList-dt.png}
 	  \caption{\textit{Dark Mode}}
@@ -140,13 +205,31 @@ Halaman ini juga dapat menampilkan \textit{side drawer} untuk melihat profil dan
 	\caption{\textit{Prototype} antarmuka halaman daftar kuis}
 	\label{Fig:HasilFeatureSetQuizListt}
 \end{figure}
-Fitur set selanjutnya ilah fitur set aktivitas mengerjakan kuis. 
-Desain yang pertama dibuat ialah desain untuk memilih kuis yang akan dikerjakan seperti tergambar pada gambar \ref*{Fig:HasilFeatureSetQuizListt}.
-Pada gambar tersebut disajikan daftar kuis yang tersedia pada aplikasi.
-Masing-masing daftar akan membuka halaman kuis yang terdapat pada gambar \ref*{Fig:HasilFeatureSetQuiz}.
-Masing-masing daftar tersebut juga terdapat tombol untuk menuju halaman fitur set \textit{leaderboard}.
-Kuis tersebut sengaja disajikan berurutan untuk memberikan kesan dinamika permainan dalam aplikasi ini.
-\begin{figure}[h]
+Gambar \ref*{Fig:HasilFeatureSetQuizListt} merupakan halaman utama ketika pengguna memasuki mode kuis. Mode kuis ini akan menampilkan daftar kuis yang tersedia sebagai pilihan bagi pengguna mengenai kuis yang akan dikerjakan.
+Elemen gamifikasi dalam halaman ini dijelaskan secara rinci pada Tabel \ref*{TabelGameDaftarKuis}.
+\begin{table}[H]
+	\caption{Tabel desain gamifikasi halaman daftar kuis}
+	\label{TabelGameDaftarKuis}
+	\begin{tabular}{|m{3.6cm}|m{0.4\textwidth}|m{0.3\textwidth}|}
+		\hline
+		Elemen Gamifikasi& Letak Elemen & Tujuan Gamifikasi\\
+		\hline
+		\multirow{3}{1cm}{\textit{Mechanic}}&Informasi mengenai jumlah soal dan waktu pengerjaan& Memberikan aturan dalam pengerjaan soal\\
+		\cline{2-3}
+		&Navigasi fitur \textit{Leaderboard}&Meberikan pengalaman kompetitif pada penggnua\\
+		\hline
+		\textit{Dynamic}&Materi berurutan&Memberikan pengalaman belajar secara berurutan \\
+		\hline
+		\multirow{3}{1cm}{\textit{Aesthetic}}&\textit{User Interface}&Terlihat lebih menarik\\
+		\cline{2-3}
+		& Tema gelap & Estetika modern dan kekinian \\
+		\hline
+	\end{tabular}
+\end{table}
+\newpage
+Selanjutnya halaman daftar kuis pada Gambar \ref*{Fig:FeatureSetQuiz}.
+Halaman kuis ini terdiri dari halaman menjawab kuis, melihat \textit{overview} kuis, dan mensubmit kuis.
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.23\textwidth}
 		\centering
@@ -169,13 +252,9 @@ Kuis tersebut sengaja disajikan berurutan untuk memberikan kesan dinamika permai
 	\caption{\textit{Prototype} antarmuka halaman kuis tema terang}
 	\label{Fig:HasilFeatureSetQuiz}
 \end{figure}
-
-Gambar \ref*{Fig:FeatureSetQuiz} merupakan halaman dimana kuis ini akan dikerjakan.
-Halaman kuis ini terdiri dari halaman menjawab kuis, melihat \textit{overview} kuis, dan mensubmit kuis.
 Pada halaman ini mekanika permainan yang diberikan ialah waktu yang menentukan berapa lama kuis tersebut dikerjakan.
 Elemen waktu ini juga dapat menjadi dinamika permainan karena akan memperngaruhi respon pengguna saat mengerjakan kuis.
 Fitur set ini juga yang menentukan mekanika permainan poin yang akan didapatkan oleh pengguna. Semakin banyak jawaban yang benar dan waktu yang cepat, semakin besar juga poin yang akan didapatkan.
-
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.23\textwidth}
@@ -199,8 +278,38 @@ Fitur set ini juga yang menentukan mekanika permainan poin yang akan didapatkan 
 	\caption{\textit{Prototype} antarmuka halaman kuis tema gelap}
 	\label{Fig:FeatureSetQuizDark}
 \end{figure}
+\begin{table}[H]
+	\caption{Tabel desain gamifikasi halaman pengerjaan kuis}
+	\label{TabelGameIsiKuis}
+	\begin{tabular}{|m{3.6cm}|m{0.4\textwidth}|m{0.3\textwidth}|}
+		\hline
+		Elemen Gamifikasi& Letak Elemen & Tujuan Gamifikasi\\
+		\hline
+		\multirow{3}{1cm}{\textit{Mechanic}}&Pengerjaan Kuis& Aturan utama dalam fitur kuis bagi pengguna\\
+		\cline{2-3}
+		&Navigasi nomor kuis&Meberikan keleluasaan bagi pengguna untuk mengerjakan soal\\
+		\cline{2-3}
+		&\textit{Time Attack}& Memberikan kesan adrenalin pengerjaan kuis\\
+		\cline{2-3}
+		&\textit{Overview}& Memberikan akses melompati soal\\
+		\hline
+		\textit{Dynamic}&Soal&Memberikan pengalaman belajar secara berurutan \\
+		\hline
+		\multirow{3}{1cm}{\textit{Aesthetic}}&\textit{User Interface}&Terlihat lebih menarik\\
+		\cline{2-3}
+		& Tema gelap & Estetika modern dan kekinian \\
+		\cline{2-3}
+		&\textit{Highlight} jawaban benar dan salah& Memberikan visual yang berbeda anatara jawaban yang benar dan yang salah\\
+		\cline{2-3}
+		&\textit{Highlight} jawaban yang belum diisi dan yang sudah& Memberikan visual yang berbeda anatara jawaban yang diisi dan yang belum diisi\\
+		\hline
+	\end{tabular}
+\end{table}
 Untuk estetika pada fitur ini sama halnya pada keseluruhan aplikasi, terdapat 2 tema yang akan mengikuti tema pada sistem android.
 Tema terang fitur ini terdapa pada gambar \ref*{Fig:HasilFeatureSetQuiz}, sedagkan tema gelap terdapat pada gambar \ref*{Fig:FeatureSetQuizDark}.
+
+Fitur set ini ditutup dengan hasil yang akan didapatkan pengguna setelah mengerjakan kuis. Poin benar akan langsung dihitung dan dikirimkan pada \textit{database} aplikasi.
+Poin tersebut kemudian diurutkan berdasarkan poin tertinggi pada kuis terkait. Halaman hasil ditampilkan pada gambar \ref*{Fig:HasilFeatureSetQuizResult}
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.23\textwidth}
@@ -218,9 +327,37 @@ Tema terang fitur ini terdapa pada gambar \ref*{Fig:HasilFeatureSetQuiz}, sedagk
 	\caption{\textit{Prototype} antarmuka halaman hasil kuis}
 	\label{Fig:HasilFeatureSetQuizResult}
 \end{figure}
-Fitur set ini ditutup dengan hasil yang akan didapatkan pengguna setelah mengerjakan kuis. Poin benar akan langsung dihitung dan dikirimkan pada database aplikasi.
-Point tersebut kemudian diurutkan berdasarkan poin tertinggi pada kuis terkait. Halaman hasil ditampilkan pada gambar \ref*{Fig:HasilFeatureSetQuizResult}
-\subsection{\textit{Feature set:} Materi}
+Halaman hasil ini akan menampilkan poin yang diperoleh oleh pengguna dan jumlah jawaban yang benar dijawab oleh pengguna.
+Elemen gamifikasi yang diimplementasikan diantara dirangkum pada Tabel\ref*{TabelGameHasilKuis}
+\begin{table}[H]
+	\caption{Tabel desain gamifikasi halaman hasil kuis}
+	\label{TabelGameHasilKuis}
+	\begin{tabular}{|m{3.6cm}|m{0.35\textwidth}|m{0.4\textwidth}|}
+		\hline
+		Elemen Gamifikasi& Letak Elemen & Tujuan Gamifikasi\\
+		\hline
+		\multirow{3}{1cm}{\textit{Mechanic}}&Kembali ke halaman utama& Memberikan akses untuk kembali ke mode utama atau halaman utama\\
+		\cline{2-3}
+		&\textit{Time}& Memberikan total waktu pengerjaan yang telah dilakukan\\
+		\cline{2-3}
+		&\textit{Overview}& Memberikan akses melihat hasil soal\\
+		\hline
+		\textit{Dynamic}&Pilihan mengulangi pengerjaan&Memberikan repetisi pembelajaran kepada pengguna \\
+		\hline
+		\multirow{3}{1cm}{\textit{Aesthetic}}&\textit{User Interface}&Terlihat lebih menarik\\
+		\cline{2-3}
+		& Tema gelap & Estetika modern dan kekinian \\
+		\cline{2-3}
+		&\textit{Highlight} jawaban benar dan salah& Memberikan visual yang berbeda anatara jawaban yang benar dan yang salah\\
+		\cline{2-3}
+		& Gambar penghargaan& Memberikan kesan penghargaan yang dicapai pengguna\\
+		\hline
+	\end{tabular}
+\end{table}
+\subsection{\textit{Feature set}: Materi}
+Desain selanjutnya ialah halaman untuk fitur materi. Gambar \ref*{Fig:HasilFeatureSetDrawer} adalah desain dari fitur set materi yang
+dapat menampilkan materi dalam bentuk .pdf dan dapat diakses secara berurutan.
+Hal ini merupakan dinamika permaianan yang diterapkan pada aplikasi ini.
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.23\textwidth}
@@ -250,19 +387,38 @@ Point tersebut kemudian diurutkan berdasarkan poin tertinggi pada kuis terkait. 
 	\caption{\textit{Prototype} antarmuka halaman fitur materi}
 	\label{Fig:HasilFeatureSetDrawer}
 \end{figure}
-Gambar \ref*{Fig:HasilFeatureSetDrawer} adalah desain dari fitur set materi.
-Fitur ini akan menampilkan materi dalam bentuk pdf. dan dapat diakses secara berurutan.
-Hal ini merupakan dinamika permaianan yang diterapkan pada aplikasi ini.
+\begin{table}[H]
+	\caption{Tabel desain gamifikasi halaman fitur materi}
+	\label{TabelGameMateri}
+	\begin{tabular}{|m{3.6cm}|m{0.35\textwidth}|m{0.4\textwidth}|}
+		\hline
+		Elemen Gamifikasi& Letak Elemen & Tujuan Gamifikasi\\
+		\hline
+		\textit{Mechanic}&Memilih materi& Memiliki keleluasaan jika ingin mengakses ulang materi\\
+		\hline
+		\textit{Dynamic}&Mempelajari materi secara berurutan&Memberikan pengalaman belajar yang berurutan \\
+		\hline
+		\multirow{3}{1cm}{\textit{Aesthetic}}&\textit{User Interface}&Terlihat lebih menarik\\
+		\cline{2-3}
+		& Tema gelap & Estetika modern dan kekinian \\
+		\cline{2-3}
+		&Gambar ilustrasi& Memberikan ilustrasi visual sesuai dengan materi\\
+		\hline
+	\end{tabular}
+\end{table}
+Fitur ini dibuat seperti demikian bertujuan untuk meningkatkan \textit{Engagement} kognitif dimana pengguna yang terlibat secara kognitif aktif dalam memproses, menganalisis, dan menafsirkan informasi secara terurut.
 \subsection{\textit{Feature set: Leaderboard}}
+Fitur set selanjutnya ialah \textit{Leaderboard}. Pada Gambar \ref*{Fig:HasilFeatureSetLeaderboard} merupakan desain hasil halaman \textit{Leaderboard} pada mode terang dan mode gelap.
+Fitur ini merupakan salah satu fitur yang diharapkan masuk ke dalam aspek \textit{Social Student Engagement} yang diimplementasikan ke dalam aplikasi MedQ.
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.26\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Leaderboard.png}
 	  \caption{\textit{Light Mode}}
 	  \label{fig:HasilQuizLeader}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.23\textwidth}
+	\begin{subfigure}[b]{0.26\textwidth}
 		\centering
 	  \includegraphics[width=\linewidth]{contents/chapter-3/images/HF-Leaderboard-dt.png}
 	  \caption{\textit{Dark Mode}}
@@ -271,11 +427,27 @@ Hal ini merupakan dinamika permaianan yang diterapkan pada aplikasi ini.
 	\caption{\textit{Prototype} antarmuka halaman \textit{Leaderboard}}
 	\label{Fig:HasilFeatureSetLeaderboard}
 \end{figure}
-Gambar \ref*{Fig:HasilFeatureSetLeaderboard} adalah desain halaman \textit{Leaderboard} pada mode terang dan mode gelap.
-\textit{Leaderboard} ini akan mengurutkan poin yang didapatkan per kuis yang dikerjakan pada fitur set kuis.
+Fitur \textit{Leaderboard} ini akan mengurutkan poin pengguna yang telah didapatkan pada fitur set kuis.
+Pengguna akan berlomba mendapatkan urutan pertama dalam fitur ini dan akan meningkatkan \textit{social engagement} bagi pengguna
 Halaman ini akan mengambil semua data poin yang sudah dikerjakan oleh penggunanya dan diurutkan berdasarkan point tertinggi.
 Fitur ini juga merupakan salah satu elemen dinamika yang diimplementasikan dalam aplikas.
+\begin{table}[H]
+	\caption{Tabel desain gamifikasi halaman \textit{Leaderboard}}
+	\label{TabelGameLeaderboard}
+	\begin{tabular}{|m{3.6cm}|m{0.35\textwidth}|m{0.4\textwidth}|}
+		\hline
+		Elemen Gamifikasi& Letak Elemen & Tujuan Gamifikasi\\
+		\hline
+		\textit{Dynamic}&Urutan poin tertinggi&Memberikan pengalaman kompetitif bagi pengguna \\
+		\hline
+		\multirow{2}{1cm}{\textit{Aesthetic}}&\textit{User Interface}&Terlihat lebih menarik\\
+		\cline{2-3}
+		& Tema gelap & Estetika modern dan kekinian \\
+		\hline
+	\end{tabular}
+\end{table}
 \subsection{\textit{Feature set: Achievement}}
+Kuis yang sudah dikerjakan akan terdaftar pada halaman profil. Daftar ini sama halnya dengan \textit{Achievement} yang didapat ketika pengguna selesai mengerjakannya.
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.23\textwidth}
@@ -293,14 +465,31 @@ Fitur ini juga merupakan salah satu elemen dinamika yang diimplementasikan dalam
 	\caption{\textit{Prototype} antarmuka halaman \textit{profile}}
 	\label{Fig:HasilFeatureSetProfil}
 \end{figure}
-Kuis yang sudah dikerjakan akan terdaftar pada halaman profil. Daftar ini sama halnya dengan \textit{Achievement} yang didapat ketika pengguna selesai mengerjakannya.
 Gambar \ref*{Fig:HasilFeatureSetProfil} adalah desain halaman profil pada mode terang dan mode gelap. Fitur ini merupakan elemen mekanika permaianan dimana pengguna akan mendapatkan penghargaan sebanyak banyaknya.
 Hal ini juga akan mempengaruhi dinamika permainan dimana pengguna akan berlomba dengan pengguna lain untuk mendapatkan lebih banyak penghargaan. 
+\begin{table}[H]
+	\caption{Tabel desain gamifikasi halaman \textit{Achievement}}
+	\label{TabelGameAchivement}
+	\begin{tabular}{|m{3.6cm}|m{0.35\textwidth}|m{0.4\textwidth}|}
+		\hline
+		Elemen Gamifikasi& Letak Elemen & Tujuan Gamifikasi\\
+		\hline
+		\textit{Mechanic}&\textit{Badge} Penghargaam &Memberikan motivasi untuk mengumpulkan penghargaan sebanyak banyaknya \\
+		\hline
+		\multirow{2}{1cm}{\textit{Aesthetic}}&\textit{User Interface}&Terlihat lebih menarik\\
+		\cline{2-3}
+		& Tema gelap & Estetika modern dan kekinian \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
 \section{Hasil Pengembangan Aplikasi}
 Proses pengembangan aplikasi ini menggunakan pendekatan \textit{FDD} dimana aplikasi akan dikembangakan berdasarkan fitur yang sudah didesain.
 Aplikasi yang dikembangkan ialah aplikasi \textit{android} dengan menggunakan \textit{software development kit flutter} sebagai kerangka kerjanya.
 Hasil pengembangan ini memiliki indikator keberhasilan melalui pengujian fungsionalitas dari setiap fiturnya.
 \subsection{Fitur \textit{Sign-in} dan \textit{Sign-out}}
+Fitur yang pertama dilakukan pengujian ialah fitur \textit{Sign-in} dan \textit{Sign-out}. Pengujian ini dilakaukan pertama untuk memastikan apakah pengguna bisa mengakses aplikasi dan dapat dicatat pada \textit{database}.
 \begin{table}[H]
 	\centering
 	\caption{\textit{Black Box Testing} fitur \textit{Sign-in} dan \textit{Sign-out}}
@@ -314,7 +503,7 @@ Hasil pengembangan ini memiliki indikator keberhasilan melalui pengujian fungsio
 		& Berhasil\\
 		\hline
 		Mencatat \textit{user} baru ketika melakukan \textit{Sign-in} pertama 
-		& Aplikasi dapat mencatat \textit{user} baru ketika melakukan \textit{Sign-in} pertama dan mengirimkannya ke database
+		& Aplikasi dapat mencatat \textit{user} baru ketika melakukan \textit{Sign-in} pertama dan mengirimkannya ke \textit{database}
 		& Berhasil\\
 		\hline
 		Aplikasi dapat memberikan akses pengguna ketika pengguna sudah terdaftar
@@ -329,7 +518,9 @@ Hasil pengembangan ini memiliki indikator keberhasilan melalui pengujian fungsio
 \end{table}
 Pengujian fitur \textit{Sign-in} dan \textit{Sign-out} memiliki 4 aktivitas pengujian yang terdapat pada tabel \ref*{Tab:blackBoxSign}.
 Pengujian ini medaparkan hasil 100\% berhasil untuk setiap aktivitas pengujiannya. Pengujian dilakukan dengan menggunakan beberapa \textit{device} untuk mendapatkan hasil yang lebih baik.
+\newpage
 \subsection{Fitur \textit{Dashboard}}
+Pengujian selanjutnya ialah fitur \textit{Dashboard}. Halaman fitur ini dikembangkan pertama kali karena merupakan fitur \textit{"root"} dalam aplikasi ini.
 \begin{table}[H]
 	\centering
 	\caption{\textit{Black Box Testing} fitur \textit{Dashboard}}
@@ -362,7 +553,9 @@ Pengujian ini medaparkan hasil 100\% berhasil untuk setiap aktivitas pengujianny
 \end{table}
 Pengujian fitur \textit{Dashboard} memiliki 5 aktivitas pengujian yang terdapat pada tabel \ref*{Tab:blackBoxDash}.
 Pengujian ini medaparkan hasil 100\% berhasil untuk setiap aktivitas pengujiannya. Pengujian ini dilakukan berulang-ulang untuk memastikan semua fitur dapat berjalan.
+\newpage
 \subsection{Fitur kuis}
+Pengujian dilanjutkan dengan pepngujian fitur set kuis. Fitur set kuis ini memiliki kriteria \textit{output} yang paling banyak dikarenakan ini merupakan fitur yang paling utama dalam aplikasi MedQ.
 \begin{table}[H]
 	\caption{\textit{Black Box Testing} fitur kuis}
 	\label{Tab:blackBoxKuis}
@@ -395,7 +588,7 @@ Pengujian ini medaparkan hasil 100\% berhasil untuk setiap aktivitas pengujianny
 		& Berhasil\\
 		\hline
 		Menyelesaikan kuis
-		& Aplikasi dapat menutup halaman utama kuis, menghitung jawaban yang benar, dan mengirim hasilya ke database
+		& Aplikasi dapat menutup halaman utama kuis, menghitung jawaban yang benar, dan mengirim hasilya ke \textit{database}
 		& Berhasil\\
 		\hline
 		Mendapatkan skor kuis
@@ -403,7 +596,7 @@ Pengujian ini medaparkan hasil 100\% berhasil untuk setiap aktivitas pengujianny
 		& Berhasil\\
 		\hline
 		Mencatat skor kuis
-		& Aplikasi dapat mengirimkan hasil kuis ke database
+		& Aplikasi dapat mengirimkan hasil kuis ke \textit{database}
 		& Berhasil\\
 		\hline
 		Menampilkan warna merah untuk jawaban yang salah dan warna hijau untuk jawaban yang benar dalam ulasan kuis
@@ -440,7 +633,9 @@ Pengujian ini medaparkan hasil 100\% berhasil untuk setiap aktivitas pengujianny
 Dengan daftar aktivitas yang banyak dan kekompleksan fitur ini menjadikan fitur ini menjadi fitur yang paling difokuskan pada aplikasi ini.
 Pengujian ini juga menguji coba seluruh kuis yang tersedia untuk memastikan semuanya berjalan secara normal.
 Fitur set ini juga mengalami banyak sekali kendala terutama pada pemberian poin yang berubah-ubah. 
+\newpage
 \subsection{Fitur Materi}
+Setelah pengujian fitur kuis, dilanjtukan dengan pengujian fitur materi. Pengujian fitur materi pada intinya memastikan bahwa semua materi yang diinputkan dapat dibaca dan diakses oleh pengguna.
 \begin{table}[H]
 	\centering
 	\caption{\textit{Black Box Testing} fitur materi}
@@ -474,7 +669,9 @@ Fitur set ini juga mengalami banyak sekali kendala terutama pada pemberian poin 
 Pengujian fitur materi memiliki 4 aktivitas pengujian yang terdapat pada tabel \ref*{Tab:blackBoxMateri}.
 Pengujian ini medaparkan hasil 100\% berhasil untuk setiap aktivitas pengujiannya.
 Pengujian ini dilakukan dengan menguji 1 per 1 materi yang akan dibuka, dan memastika semua materi sesuai dengan judul pada aplikasi.
-\subsection{Fitur Leaderboard}
+\newpage
+\subsection{Fitur \textit{Leaderboard}}
+Fitur yang selanjutnya ialah fitur \textit{Leaderboard}. Fitur ini dilakukan setelah fitur kuis sudah mampu mengirimkan data aplikasi ke dalam \textit{database}. Kemudian data pada \textit{database} dapat diambil untuk diurutkan dalam aplikasi.
 \begin{table}[H]
 	\caption{\textit{Black Box Testing} fitur \textit{Leaderboard}}
 	\label{Tab:blackBoxLead}
@@ -503,7 +700,9 @@ Pengujian ini dilakukan dengan menguji 1 per 1 materi yang akan dibuka, dan mema
 Pengujian fitur \textit{Leaderboard} memiliki 4 aktivitas pengujian yang terdapat pada tabel \ref*{Tab:blackBoxLead}.
 Pengujian ini medaparkan hasil 100\% berhasil untuk setiap aktivitas pengujiannya. Pengujian ini dilakukan bersama beberapa teman untuk mengerjakan kuis.
 Urutan skor dalam halaman ini sempat mengalami eror, tetapi berhasil diperbaiki dan sesuai dengan kriteria yang ditetapkan.
+\newpage
 \subsection{Fitur penghargaan}
+Pengujian fitur penghargaan dilakukan terakhir untuk memastikan kuis yang sudah dikerjakan dapat tercatat dan dapat diambil datanya untuk ditampilkan pada halaman profil pengguna.
 \begin{table}[H]
 	\caption{\textit{Black Box Testing} fitur \textit{Achievement}}
 	\label{Tab:blackBoxAchie}
@@ -696,3 +895,14 @@ kebaruan aplikasi MedQ mendapat nilai rata-rata 1,3.
 Apabila dibandingkan dengan benchmark maka aplikasi MedQ masuk ke 
 dalam kategori \textit{Excellent} untuk skala daya tarik, efisiensi, ketepatanm dan stimulasi.
 Tapi masuk kategori \textit{Good} untuk skala kejelasan dan kebaruan
+
+\newpage
+\subsection{Kekurangan Aplikasi}
+Aplikasi ini memiliki beberapa kekurangan yang dapat dikembangkan lagi. Kekurangan tersebut diantarannya:
+\begin{enumerate}
+	\item Aplikasi masih hanya dapat berjalan dalam sistem operasi Android.
+	\item Aplikasi masih bisa diimplementasikan fitur tambahan yang dapat memperluas cakupan pengguna aplikasi.
+	\item Aplikasi belum memiliki \textit{audio}.
+	\item Aplikasi belum memiliki fitur \textit{tutorial} yang dapat membantu pengguna dalam menggunakan aplikasi.
+	\item Aplikasi pembelajaran dikembangkan berdasarkan 1 domain pembelajaran.
+\end{enumerate}
